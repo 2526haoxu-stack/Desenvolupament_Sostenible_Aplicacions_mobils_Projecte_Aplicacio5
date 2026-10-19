@@ -16,5 +16,14 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        fun checkUser(user: String): Boolean {
+            return true
+        }
+
+        fun checkPass(password: String): Boolean {
+            return true
+        }
     }
 }
