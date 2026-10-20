@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Activitat_05</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="nameField">Nombre</string>
+    <string name="lastNameField">Apellido</string>
+    <string name="emailField">Correo electrónico</string>
+    <string name="birthdayField">Fecha nacimiento</string>
+    <string name="phoneNumberField">Número de teléfono</string>
+    <string name="passwordField">Contraseña</string>
+    <string name="passwordAgainField">Confirmar la contraseña</string>
+    <string name="ya_tienes_una_cuenta">Ya tienes una cuenta?</string>
+    <string name="log_in">Log in</string>
 </resources>
