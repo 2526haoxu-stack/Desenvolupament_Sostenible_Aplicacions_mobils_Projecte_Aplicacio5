@@ -7,4 +7,5 @@
     <string name="sign_up">Registrate</string>
     <string name="ya_tienes_una_cuenta">Ya tienes una cuenta?</string>
     <string name="log_in">Log in</string>
+    <string name="no_tienes_cuenta">No tienes cuenta?</string>
 </resources>
