@@ -1,7 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Activitat_05" parent="Theme.Material3Expressive.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Definim els atributs adaptats per al mode fosc -->
+        <item name="colorPrimary">@color/primary_color_fosc</item>
+        <!--<item name="colorSecondary">@color/blau_secundari_fosc</item>
+        <item name="android:windowBackground">@color/fons_fosc</item>
+
+        Superfícies i textos sobre superfícies en mode fosc
+        <item name="colorSurface">@color/superficie_fosca</item>
+        <item name="colorOnSurface">@color/text_sobre_superficie_fosc</item>-->
     </style>
 </resources>
