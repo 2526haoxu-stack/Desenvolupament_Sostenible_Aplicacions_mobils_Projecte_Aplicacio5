@@ -4,4 +4,6 @@
     <string name="username">Ponga su nombre de usuario</string>
     <string name="password">Ponga su contraseña</string>
     <string name="enter">Entra</string>
+    <string name="no_tens_compte">No tens compte?</string>
+    <string name="registra_t">Registra\'t</string>
 </resources>
