@@ -8,4 +8,11 @@
     <string name="ya_tienes_una_cuenta">Ya tienes una cuenta?</string>
     <string name="log_in">Log in</string>
     <string name="no_tienes_cuenta">No tienes cuenta?</string>
+    <string name="nameField">Nombre</string>
+    <string name="lastNameField">Apellido</string>
+    <string name="emailField">Correo electrónico</string>
+    <string name="birthdayField">Fecha de nacimiento</string>
+    <string name="phoneNumberField">Número de teléfono</string>
+    <string name="passwordField">Contraseña</string>
+    <string name="passwordAgainField">Confirmar contraseña</string>
 </resources>
