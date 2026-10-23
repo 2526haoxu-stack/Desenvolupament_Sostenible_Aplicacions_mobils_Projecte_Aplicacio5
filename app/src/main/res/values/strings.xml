@@ -15,4 +15,7 @@
     <string name="phoneNumberField">Número de teléfono</string>
     <string name="passwordField">Contraseña</string>
     <string name="passwordAgainField">Confirmar contraseña</string>
+    <string name="nombre_comida">SHALIK BRAT</string>
+    <string name="nyam">nyam</string>
+    <string name="open">open</string>
 </resources>
