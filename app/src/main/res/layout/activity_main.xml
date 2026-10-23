@@ -14,15 +14,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fragmentContainerView"
-        android:background="@color/primary_color"
+        android:background="?attr/headerMain"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LOGO"
-            android:textColor="@color/black"/>
-
+            android:layout_height="match_parent"
+            android:text="Logo"
+            android:textSize="150sp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src=""/>
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -40,7 +43,7 @@
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="horizontal"
-        android:background="@color/primary_color">
+        android:background="?attr/headerMain">
 
     </LinearLayout>
 
