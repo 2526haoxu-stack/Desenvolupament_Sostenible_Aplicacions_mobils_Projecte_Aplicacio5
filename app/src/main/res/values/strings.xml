@@ -18,4 +18,11 @@
     <string name="nombre_comida">SHALIK BRAT</string>
     <string name="nyam">nyam</string>
     <string name="open">open</string>
+    <string name="logo">Cookly</string>
+    <string name="opcionAmigos">Amigos</string>
+    <string name="opcionPreferencias">Preferencias</string>
+    <string name="opcionNotificaciones">Notificaciones</string>
+    <string name="opcionPrivacidad">Privacidad</string>
+    <string name="opcionSeguridad">Seguridad</string>
+    <string name="configuracion">Configuración</string>
 </resources>

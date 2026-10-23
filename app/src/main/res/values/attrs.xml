@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="headerMain" format="color"/>
+    <attr name="button" format="color"/>
+    <attr name="buttonText" format="color"/>
+    <attr name="settingText" format="color"/>
 </resources>

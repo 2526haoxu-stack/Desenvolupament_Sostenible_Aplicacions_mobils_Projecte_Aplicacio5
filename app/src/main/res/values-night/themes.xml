@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Activitat_05" parent="Theme.Material3Expressive.DayNight.NoActionBar">
         <!-- Definim els atributs adaptats per al mode fosc-->
-        <item name="colorPrimary">@color/grayFosc</item>
         <item name="colorSurface">@color/orangeFosc</item>
         <item name="headerMain">@color/orangeFosc</item>
+        <item name="button">@color/buttonColorFosc</item>
+        <item name="buttonText">@color/white</item>
+        <item name="android:textColor">@color/balckFosc</item>
+        <item name="settingText">@color/settingTextFosc</item>
     </style>
 </resources>

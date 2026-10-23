@@ -23,10 +23,14 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="false"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SignUpActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SettingActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
     </application>
