@@ -12,7 +12,7 @@
 
 
     <!-- Color principal de la marca (Violeta vibrant i elèctric) -->
-    <color name="primary_color">#FF7F50</color>
+    <!--<color name="primary_color">#FF7F50</color>-->
 
     <!-- Color secundari o d'accent (Rosa/Lila complementari) -->
     <!--<color name="blau_secundari">#FFEC4899</color>-->
@@ -25,6 +25,8 @@
 
      Text sobre superfícies clares (Gris molt fosc per a una lectura òptima)
     <color name="text_sobre_superficie_clar">#FF0F172A</color>-->
+
+
 
 
     <!-- ========================================== -->
