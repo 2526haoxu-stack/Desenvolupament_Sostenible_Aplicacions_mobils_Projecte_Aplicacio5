@@ -4,28 +4,16 @@
     <!-- PALETA MODE CLAR (Vibrant Violet Style)    -->
     <!-- ========================================== -->
 
-    <color name="black">#FF000000</color>
+    <!--<color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF7F50</color>
     <color name="text">#2F3640</color>
+    -->
+
+
     <color name="gray">#7B8794</color>
-
-
-    <!-- Color principal de la marca (Violeta vibrant i elèctric) -->
-    <!--<color name="primary_color">#FF7F50</color>-->
-
-    <!-- Color secundari o d'accent (Rosa/Lila complementari) -->
-    <!--<color name="blau_secundari">#FFEC4899</color>-->
-
-    <!-- Fons general de la finestra (Gris molt clar amb un subtil toc lila)
-    <color name="fons_clar">#FFF8FAFC</color>
-
-     Superfícies (Tarjetes, contenidors): Blanc pur
-    <color name="superficie_clara">#FFFFFFFF</color>
-
-     Text sobre superfícies clares (Gris molt fosc per a una lectura òptima)
-    <color name="text_sobre_superficie_clar">#FF0F172A</color>-->
-
+    <color name="orange">#FF7F50</color>
+    <color name="black">#000000</color>
 
 
 
@@ -34,14 +22,10 @@
     <!-- ========================================== -->
 
     <!-- Color principal adaptat per a mode fosc (Violeta més suau i lluminós) -->
-    <color name="primary_color_fosc">#782808</color>
+    <color name="grayFosc">#2A2F36</color>
+    <color name="orangeFosc">#732606</color>
 
-    <!-- Color secundari adaptat per a mode fosc
-    <color name="blau_secundari_fosc">#FFF472B6</color>
 
-    <color name="fons_fosc">#FF09090B</color>
-
-    <color name="superficie_fosca">#FF18181B</color>
 
     Text sobre superfícies fosques (Blanc gairebé pur) -->
     <color name="text_sobre_superficie_fosc">#FFF4F4F5</color>

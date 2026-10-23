@@ -1,14 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Activitat_05" parent="Theme.Material3Expressive.DayNight.NoActionBar">
-        <!-- Definim els atributs personalitzats per al mode clar -->
+        <!-- Definim els atributs personalitzats per al mode clar
         <item name="colorPrimary">@color/primary_color</item>
-        <!--<item name="colorSecondary">@color/blau_secundari</item>
-        <item name="android:windowBackground">@color/fons_clar</item>
-
-         Superfícies i textos sobre superfícies
-        <item name="colorSurface">@color/superficie_clara</item>
-        <item name="colorOnSurface">@color/text_sobre_superficie_clar</item>-->
+        <item name="colorSecondary">@color/blau_secundari</item>
+        <item name="android:windowBackground">@color/fons_clar</item>-->
+        <item name="colorPrimary">@color/gray</item>
+        <item name="colorSurface">@color/orange</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerMain">@color/orange</item>
     </style>
 
     <style name="Theme.Activitat_05" parent="Base.Theme.Activitat_05" />
