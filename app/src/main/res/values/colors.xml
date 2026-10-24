@@ -11,11 +11,11 @@
 
 
     <!--<color name="gray">#7B8794</color>-->
-    <color name="black">#000000</color>
-    <color name="orange">#FF7F50</color>
-    <color name="white">#FFFFFF</color>
-    <color name="buttonColor">#1E96F2</color>
-    <color name="settingText">#321D71</color>
+    <color name="headerButtonsLink">#E67E22</color>
+    <color name="body">#FFF8F0</color>
+    <color name="footer">#F8E4D9</color>
+    <color name="headerButtonText">#FFFFFF</color>
+    <color name="textGeneral">#5D4037</color>
 
 
     <!-- ========================================== -->
@@ -24,10 +24,12 @@
 
     <!-- Color principal adaptat per a mode fosc (Violeta més suau i lluminós) -->
     <!--<color name="grayFosc">#2A2F36</color>-->
-    <color name="balckFosc">#E4E4E4</color>
-    <color name="orangeFosc">#F6936F</color>
-    <color name="buttonColorFosc">#60B4F0</color>
-    <color name="settingTextFosc">#6D4DCB</color>
+    <color name="headerButtonsLinkFosc">#F0995A</color>
+    <color name="bodyFosc">#16120D</color>
+    <color name="footerFosc">#2B2017</color>
+    <color name="headerButtonTextFosc">#E4E4E4</color>
+    <color name="textGeneralFosc">#A87E71</color>
+
 
     Text sobre superfícies fosques (Blanc gairebé pur) -->
     <color name="text_sobre_superficie_fosc">#FFF4F4F5</color>
