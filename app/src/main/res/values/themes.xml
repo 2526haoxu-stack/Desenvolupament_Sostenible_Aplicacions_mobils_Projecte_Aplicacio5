@@ -2,11 +2,17 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Activitat_05" parent="Theme.Material3Expressive.DayNight.NoActionBar">
         <!-- Definim els atributs personalitzats per al mode clar-->
-        <item name="headerButtonsLink">@color/headerButtonsLink</item>
+        <item name="headerLink">@color/headerLink</item>
+        <item name="colorPrimary">@color/headerLink</item>
+
         <item name="body">@color/body</item>
+
         <item name="footer">@color/footer</item>
+
         <item name="android:textColor">@color/textGeneral</item>
-        <item name="headerButtonText">@color/headerButtonText</item>
+
+        <item name="headerText">@color/headerText</item>
+        <item name="colorOnPrimary">@color/headerText</item>
     </style>
 
     <style name="Theme.Activitat_05" parent="Base.Theme.Activitat_05" />

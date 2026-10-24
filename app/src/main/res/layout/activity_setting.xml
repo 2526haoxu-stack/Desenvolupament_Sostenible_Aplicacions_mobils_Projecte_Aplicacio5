@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/body"
         android:gravity="center"
-        android:background="?attr/headerButtonsLink">
+        android:background="?attr/headerLink">
 
         <ImageView
             android:id="@+id/aSBack"
@@ -28,7 +28,7 @@
             android:text="@string/configuracion"
             android:textSize="50sp"
             android:layout_weight="0.9"
-            android:textColor="?attr/headerButtonText"/>
+            android:textColor="?attr/headerText"/>
     </LinearLayout>
 
     <LinearLayout
@@ -43,26 +43,22 @@
         android:background="?attr/body">
 
         <LinearLayout
+            android:id="@+id/aSOptionLanguages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/lock_24dp"
-                    android:paddingEnd="20dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/opcionSeguridad"
-                    android:textSize="35sp"/>
-            </LinearLayout>
+                android:src="@drawable/language_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:id="@+id/aSOptionLanguagesText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/opcionIdiomas"
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -70,21 +66,16 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/privacy_tip_24dp"
-                    android:paddingEnd="20dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/opcionPrivacidad"
-                    android:textSize="35sp"/>
-            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/lock_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/opcionSeguridad"
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -92,21 +83,33 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/privacy_tip_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opcionPrivacidad"
+                android:textSize="35sp"/>
+        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/notifications_24dp"
-                    android:paddingEnd="20dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/opcionNotificaciones"
-                    android:textSize="35sp"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/notifications_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opcionNotificaciones"
+                android:textSize="35sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -131,21 +134,16 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/friend_24dp"
-                    android:paddingEnd="20dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/opcionAmigos"
-                    android:textSize="35sp"/>
-            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/friend_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opcionAmigos"
+                android:textSize="35sp"/>
         </LinearLayout>
     </LinearLayout>
 

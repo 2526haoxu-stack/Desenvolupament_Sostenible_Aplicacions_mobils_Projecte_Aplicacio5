@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="headerButtonsLink" format="color"/>
+    <attr name="headerLink" format="color"/>
     <attr name="footer" format="color"/>
     <attr name="body" format="color"/>
     <attr name="link" format="color"/>
-    <attr name="headerButtonText" format="color"/>
+    <attr name="headerText" format="color"/>
 
 </resources>
