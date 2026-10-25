@@ -37,6 +37,22 @@
             android:name=".OptionLanguagesActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OptionSecurityActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OptionPrivacyActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OptionPreferenceActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".OptionFriendActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

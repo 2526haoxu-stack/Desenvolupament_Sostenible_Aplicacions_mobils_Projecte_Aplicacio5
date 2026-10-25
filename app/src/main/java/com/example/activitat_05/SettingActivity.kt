@@ -13,6 +13,11 @@ import androidx.core.view.WindowInsetsCompat
 class SettingActivity : AppCompatActivity() {
     lateinit var buttonBack : ImageView
     lateinit var optionLanguages : LinearLayout
+    lateinit var optionSecurity : LinearLayout
+    lateinit var optionPrivacy : LinearLayout
+    lateinit var optionNotification : LinearLayout
+    lateinit var optionPreference : LinearLayout
+    lateinit var optionFriend : LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +32,11 @@ class SettingActivity : AppCompatActivity() {
         // Relacionar variables con los id's --> Start
         buttonBack = findViewById(R.id.aSBack)
         optionLanguages = findViewById(R.id.aSOptionLanguages)
+        optionSecurity = findViewById(R.id.aSOptionSecurity)
+        optionPrivacy = findViewById(R.id.aSOptionPrivacy)
+        optionNotification = findViewById(R.id.aSOptionNotification)
+        optionPreference = findViewById(R.id.aSOptionPreference)
+        optionFriend = findViewById(R.id.aSOptionFriend)
 
         // rV --> End
 
@@ -38,6 +48,30 @@ class SettingActivity : AppCompatActivity() {
 
         optionLanguages.setOnClickListener {
             var intent = Intent(this, OptionLanguagesActivity::class.java)
+            startActivity(intent)
+        }
+
+        optionSecurity.setOnClickListener {
+            var intent = Intent(this, OptionSecurityActivity::class.java)
+            startActivity(intent)
+        }
+
+        optionPrivacy.setOnClickListener {
+            var intent = Intent(this, OptionPrivacyActivity::class.java)
+            startActivity(intent)
+        }
+
+        optionNotification.setOnClickListener {
+
+        }
+
+        optionPreference.setOnClickListener {
+            var intent = Intent(this, OptionPreferenceActivity::class.java)
+            startActivity(intent)
+        }
+
+        optionFriend.setOnClickListener {
+            var intent = Intent(this, OptionFriendActivity::class.java)
             startActivity(intent)
         }
 

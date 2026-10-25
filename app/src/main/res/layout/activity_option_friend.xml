@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionFriendActivity">
+
+    <LinearLayout
+        android:id="@+id/aOFTitle"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/body"
+        android:gravity="center"
+        android:background="?attr/headerLink">
+
+        <ImageView
+            android:id="@+id/aOFBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_24dp"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/opcionAmigos"
+            android:textSize="50sp"
+            android:layout_weight="0.9"
+            android:textColor="?attr/headerText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/aOFTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="20dp"
+        android:background="?attr/body">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="?attr/headerText">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amigos:"
+                android:textSize="35sp"
+                android:background="?attr/headerText"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

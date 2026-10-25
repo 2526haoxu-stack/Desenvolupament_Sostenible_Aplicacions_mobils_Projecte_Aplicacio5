@@ -13,6 +13,7 @@
 
         <item name="headerText">@color/headerText</item>
         <item name="colorOnPrimary">@color/headerText</item>
+        <item name="black">@color/black</item>
     </style>
 
     <style name="Theme.Activitat_05" parent="Base.Theme.Activitat_05" />
