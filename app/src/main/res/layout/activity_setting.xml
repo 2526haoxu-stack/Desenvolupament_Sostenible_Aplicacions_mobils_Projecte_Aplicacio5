@@ -150,6 +150,42 @@
                 android:text="@string/opcionAmigos"
                 android:textSize="35sp"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aSOChangeCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/change_count_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar de cuenta"
+                android:textSize="35sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aSOLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logout_24dp"
+                android:paddingEnd="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerrar de sesión"
+                android:textSize="35sp"/>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

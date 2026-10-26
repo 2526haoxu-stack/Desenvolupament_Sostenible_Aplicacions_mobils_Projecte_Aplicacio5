@@ -5,10 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".MyRecipeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Estas en la pantalla de mis recetas" />
+        android:background="?attr/body">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estas en la pagina de mis recetas"/>
+    </LinearLayout>
 
 </FrameLayout>

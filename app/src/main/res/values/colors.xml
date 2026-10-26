@@ -4,17 +4,12 @@
     <!-- PALETA MODE CLAR (Vibrant Violet Style)    -->
     <!-- ========================================== -->
 
-    <!--<color name="black">#FF000000</color>
-    <color name="orange">#FF7F50</color>
-    <color name="text">#2F3640</color>
-    -->
-
-
-    <!--<color name="gray">#7B8794</color>-->
     <color name="headerLink">#E67E22</color>
-    <color name="body">#FFF8F0</color>
-    <color name="footer">#F8E4D9</color>
     <color name="headerText">#FFFFFF</color>
+    <color name="subtitle">#F9EBDC</color>
+    <color name="subtitleText">#5D4037</color>
+    <color name="body">#FFF8F0</color>
+    <color name="footer">#F5D9C4</color>
     <color name="textGeneral">#5D4037</color>
     <color name="black">#000000</color>
 
@@ -24,12 +19,13 @@
     <!-- ========================================== -->
 
     <!-- Color principal adaptat per a mode fosc (Violeta més suau i lluminós) -->
-    <!--<color name="grayFosc">#2A2F36</color>-->
-    <color name="headerLinkFosc">#F0995A</color>
-    <color name="bodyFosc">#16120D</color>
-    <color name="footerFosc">#2B2017</color>
-    <color name="headerTextFosc">#E4E4E4</color>
-    <color name="textGeneralFosc">#A87E71</color>
+    <color name="headerLinkFosc">#E67E22</color>
+    <color name="headerTextFosc">#FFFFFF</color>
+    <color name="subtitleFosc">#271F15</color>
+    <color name="subtitleTextFosc">#F5E6D3</color>
+    <color name="bodyFosc">#1E1810</color>
+    <color name="footerFosc">#33281C</color>
+    <color name="textGeneralFosc">#F5E6D3</color>
 
 
     Text sobre superfícies fosques (Blanc gairebé pur) -->

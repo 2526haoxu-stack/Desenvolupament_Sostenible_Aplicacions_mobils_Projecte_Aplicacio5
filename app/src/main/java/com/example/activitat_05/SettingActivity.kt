@@ -18,6 +18,8 @@ class SettingActivity : AppCompatActivity() {
     lateinit var optionNotification : LinearLayout
     lateinit var optionPreference : LinearLayout
     lateinit var optionFriend : LinearLayout
+    lateinit var optionLogOut : LinearLayout
+    lateinit var optionChangeCount : LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +39,8 @@ class SettingActivity : AppCompatActivity() {
         optionNotification = findViewById(R.id.aSOptionNotification)
         optionPreference = findViewById(R.id.aSOptionPreference)
         optionFriend = findViewById(R.id.aSOptionFriend)
+        optionChangeCount = findViewById(R.id.aSOChangeCount)
+        optionLogOut = findViewById(R.id.aSOLogOut)
 
         // rV --> End
 
@@ -62,7 +66,8 @@ class SettingActivity : AppCompatActivity() {
         }
 
         optionNotification.setOnClickListener {
-
+            var intent = Intent(this, OptionNotificationActivity::class.java)
+            startActivity(intent)
         }
 
         optionPreference.setOnClickListener {
@@ -75,6 +80,15 @@ class SettingActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        optionLogOut.setOnClickListener {
+            var intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        optionChangeCount.setOnClickListener {
+            var intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
         // f --> End
 
     }

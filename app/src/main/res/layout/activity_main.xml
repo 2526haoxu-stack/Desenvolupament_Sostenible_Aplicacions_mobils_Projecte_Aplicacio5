@@ -97,6 +97,4 @@
                 android:src="@drawable/list_24dp"/>
         </LinearLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

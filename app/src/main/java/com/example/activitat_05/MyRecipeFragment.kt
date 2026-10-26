@@ -16,7 +16,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [MyRecipeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MyRecipeFragment : Fragment() {
+class MyRecipeFragment : Fragment(R.layout.fragment_my_recipe) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
