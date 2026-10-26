@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
         // f --> End
 
         // Funciones para navegar entre los fragmentos --> Start
-        // Ir al fragmento de Help
         findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
@@ -52,7 +51,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
                 .commit()
         }
 
-        // Ir al fragmento principal
         findViewById<LinearLayout>(R.id.aMHome).setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
@@ -61,7 +59,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
                 .commit()
         }
 
-        // Ir al fragmento de Perfil
         findViewById<LinearLayout>(R.id.aMProfile).setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
@@ -70,7 +67,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
                 .commit()
         }
 
-        // Ir al fragmento de Mi receta
         findViewById<LinearLayout>(R.id.aMMyRecipe).setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
