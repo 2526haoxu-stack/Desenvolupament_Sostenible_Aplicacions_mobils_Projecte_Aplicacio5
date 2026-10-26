@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,7 +46,7 @@ class firstFragment : Fragment(R.layout.fragment_first) {
 //    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 //        super.onViewCreated(view, savedInstanceState)
 //
-//        view.findViewById<Button>(R.id.btnAcceptar).setOnClickListener {
+//        view.findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
 //            val activity = requireActivity()
 //            if (activity is Listener) {
 //                activity.onFragmentFinalitzat()

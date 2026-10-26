@@ -3,12 +3,13 @@ package com.example.activitat_05
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity(), firstFragment.Listener {
+class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
     lateinit var buttonSetting : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,14 +42,54 @@ class MainActivity : AppCompatActivity(), firstFragment.Listener {
 
         // f --> End
 
+        // Funciones para navegar entre los fragmentos --> Start
+        // Ir al fragmento de Help
+        findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragmentContainerView, HelpFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Ir al fragmento principal
+        findViewById<LinearLayout>(R.id.aMHome).setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragmentContainerView, firstFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Ir al fragmento de Perfil
+        findViewById<LinearLayout>(R.id.aMProfile).setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragmentContainerView, ProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        // Ir al fragmento de Mi receta
+        findViewById<LinearLayout>(R.id.aMMyRecipe).setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragmentContainerView, MyRecipeFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+        // fNF --> End
+
     }
 
+
+
     // La Activity decide qué hacer cuando el fragment termina
-    override fun onFragmentFinalitzat() {
+//    override fun onFragmentFinalitzat() {
 //        supportFragmentManager.beginTransaction()
 //            .setReorderingAllowed(true)
-//            .replace(R.id.fragmentContainerView, secondFragment())
+//            .replace(R.id.fragmentContainerView, HelpFragment())
 //            .addToBackStack(null)
 //            .commit()
-    }
+//    }
 }

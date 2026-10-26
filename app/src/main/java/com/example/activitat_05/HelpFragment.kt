@@ -13,13 +13,17 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [segondFragment.newInstance] factory method to
+ * Use the [HelpFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class segondFragment : Fragment() {
+class HelpFragment : Fragment(R.layout.fragment_help) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    interface Listener {
+        fun onFragmentFinalitzat()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +38,7 @@ class segondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_segond, container, false)
+        return inflater.inflate(R.layout.fragment_help, container, false)
     }
 
     companion object {
@@ -44,12 +48,12 @@ class segondFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment segondFragment.
+         * @return A new instance of fragment HelpFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            segondFragment().apply {
+            HelpFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

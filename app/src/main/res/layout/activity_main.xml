@@ -49,6 +49,53 @@
         android:orientation="horizontal"
         android:background="?attr/footer">
 
+        <LinearLayout
+            android:id="@+id/aMHelp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/help_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/home_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMMyRecipe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/list_24dp"/>
+        </LinearLayout>
     </LinearLayout>
 
 
