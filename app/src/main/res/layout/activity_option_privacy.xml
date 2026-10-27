@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/aOSTitle"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="90dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/aOSBody"
         android:gravity="center"
