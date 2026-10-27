@@ -8,11 +8,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/body">
+        android:background="?attr/body"
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estas en la pagina de mis recetas"/>
+
     </LinearLayout>
+
+
 
 </FrameLayout>

@@ -4,6 +4,7 @@
         <!-- Definim els atributs personalitzats per al mode clar-->
         <item name="headerLink">@color/headerLink</item>
         <item name="subHeader">@color/subtitle</item>
+        <item name="subHeaderText">@color/subtitleText</item>
         <item name="colorPrimary">@color/headerLink</item>
 
         <item name="body">@color/body</item>

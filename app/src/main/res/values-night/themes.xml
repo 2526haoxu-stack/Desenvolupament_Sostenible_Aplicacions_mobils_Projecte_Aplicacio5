@@ -4,6 +4,7 @@
         <!-- Definim els atributs adaptats per al mode fosc-->
         <item name="headerLink">@color/headerLinkFosc</item>
         <item name="subHeader">@color/subtitleFosc</item>
+        <item name="subHeaderText">@color/subtitleTextFosc</item>
         <item name="colorPrimary">@color/headerLinkFosc</item>
 
         <item name="body">@color/bodyFosc</item>
