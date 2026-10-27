@@ -46,7 +46,7 @@
                     android:layout_width="22dp"
                     android:layout_gravity="end"
                     android:contentDescription="@string/open"
-                    android:src="@drawable/open_in_new_24px" />
+                    android:src="@drawable/open_in_new_24px"/>
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
