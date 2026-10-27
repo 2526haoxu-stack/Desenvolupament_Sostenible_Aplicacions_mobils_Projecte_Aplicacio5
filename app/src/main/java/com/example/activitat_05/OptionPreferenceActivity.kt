@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.slider.Slider
 
 class OptionPreferenceActivity : AppCompatActivity() {
-    lateinit var back : ImageView
+    lateinit var back : LinearLayout
     lateinit var slider : Slider
     lateinit var sliderText : TextView
     lateinit var acceptButton : Button
@@ -28,7 +29,7 @@ class OptionPreferenceActivity : AppCompatActivity() {
         }
 
         // Relacionar variables con los id's --> Start
-        back = findViewById(R.id.aOPrBack)
+        back = findViewById(R.id.aOPClose)
         slider = findViewById(R.id.aOPSlider)
         sliderText = findViewById(R.id.aOPSliderText)
         acceptButton = findViewById(R.id.aOPAccept)
