@@ -26,15 +26,15 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         // Vincular las variables con el ID --> vID start
-        signUp = findViewById(R.id.signUpButton)
-        volverLogIn = findViewById(R.id.volverLogIn)
+        signUp = findViewById(R.id.aSSignUpButton)
+        volverLogIn = findViewById(R.id.aSBackLogIn)
 
         // vID --> end
 
 
         // Funciones --> f start
         signUp.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 

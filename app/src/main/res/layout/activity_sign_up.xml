@@ -15,14 +15,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/aSbody"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="?attr/body">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
-            android:textSize="46sp"
-            android:textColor="@color/black"/>
+            android:textSize="46sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -33,14 +33,16 @@
         app:layout_constraintBottom_toTopOf="@id/Footer"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="?attr/body">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameFiled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nameField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -54,7 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/lastNameField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -68,7 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/emailField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -82,7 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/birthdayField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -96,7 +101,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/phoneNumberField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -110,7 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/passwordField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -124,7 +131,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/passwordAgainField"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -143,16 +151,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="?attr/footer">
         <Button
-            android:id="@+id/signUpButton"
+            android:id="@+id/aSSignUpButton"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="@string/sign_up"
-            android:checkable="true"
             android:textSize="24sp"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"/>
+            android:textColor="?attr/headerText"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,16 +171,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ya_tienes_una_cuenta"
-                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:paddingRight="5dp"/>
 
             <TextView
-                android:id="@+id/volverLogIn"
+                android:id="@+id/aSBackLogIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/log_in"
-                android:textColor="@color/black"
+                android:textColor="?attr/headerLink"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

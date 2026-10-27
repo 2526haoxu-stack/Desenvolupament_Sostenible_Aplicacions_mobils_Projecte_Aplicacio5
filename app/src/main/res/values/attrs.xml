@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="headerMain" format="color"/>
+    <attr name="headerLink" format="color"/>
+    <attr name="headerText" format="color"/>
+    <attr name="footer" format="color"/>
+    <attr name="body" format="color"/>
+    <attr name="link" format="color"/>
+    <attr name="black" format="color"/>
+    <attr name="subHeader" format="color"/>
+    <attr name="subHeaderText" format="color"/>
+
 </resources>

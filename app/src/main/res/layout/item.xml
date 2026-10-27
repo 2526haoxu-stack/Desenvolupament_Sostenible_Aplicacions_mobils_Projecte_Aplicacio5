@@ -5,20 +5,19 @@
     android:layout_height="wrap_content"
     tools:layout_width="180dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_margin="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/orange"
             android:padding="12dp">
 
             <ImageView
@@ -26,9 +25,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/nyam"
-                android:src="@drawable/img"
-                />
-
+                android:src="@drawable/img"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

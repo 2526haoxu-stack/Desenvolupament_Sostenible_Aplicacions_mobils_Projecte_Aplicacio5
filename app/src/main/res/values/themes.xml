@@ -1,14 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Activitat_05" parent="Theme.Material3Expressive.DayNight.NoActionBar">
-        <!-- Definim els atributs personalitzats per al mode clar
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorSecondary">@color/blau_secundari</item>
-        <item name="android:windowBackground">@color/fons_clar</item>-->
-        <item name="colorPrimary">@color/gray</item>
-        <item name="colorSurface">@color/orange</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="headerMain">@color/orange</item>
+        <!-- Definim els atributs personalitzats per al mode clar-->
+        <item name="headerLink">@color/headerLink</item>
+        <item name="subHeader">@color/subtitle</item>
+        <item name="subHeaderText">@color/subtitleText</item>
+        <item name="colorPrimary">@color/headerLink</item>
+
+        <item name="body">@color/body</item>
+
+        <item name="footer">@color/footer</item>
+
+        <item name="android:textColor">@color/textGeneral</item>
+
+        <item name="headerText">@color/headerText</item>
+        <item name="colorOnPrimary">@color/headerText</item>
+        <item name="black">@color/black</item>
     </style>
 
     <style name="Theme.Activitat_05" parent="Base.Theme.Activitat_05" />

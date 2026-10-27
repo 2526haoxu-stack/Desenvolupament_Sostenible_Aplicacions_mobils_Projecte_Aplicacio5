@@ -14,18 +14,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fragmentContainerView"
-        android:background="?attr/headerMain"
+        android:background="?attr/headerLink"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Logo"
-            android:textSize="150sp"/>
+            android:text="@string/logo"
+            android:textSize="90sp"
+            android:layout_weight="0.8"
+            android:textColor="?attr/headerText"/>
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/aMSetting"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src=""/>
+            android:src="@drawable/menu_24dp"
+            android:layout_weight="0.2"/>
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -43,9 +47,54 @@
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="horizontal"
-        android:background="?attr/headerMain">
+        android:background="?attr/footer">
 
+        <LinearLayout
+            android:id="@+id/aMHelp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/help_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/home_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile_24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aMMyRecipe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/list_24dp"/>
+        </LinearLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

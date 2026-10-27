@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="?attr/body">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_height="wrap_content"
@@ -42,6 +43,7 @@
                 android:hint="@string/password"
                 android:padding="12dp"/>
             <Button
+                android:id="@+id/aMEnter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/enter"
@@ -58,13 +60,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/no_tienes_cuenta"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:paddingEnd="5dp"/>
                 <TextView
+                    android:id="@+id/aMSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/sign_up"
-                    android:textColor="@color/black"/>
+                    android:textColor="?attr/headerLink"/>
             </LinearLayout>
         </LinearLayout>
 
