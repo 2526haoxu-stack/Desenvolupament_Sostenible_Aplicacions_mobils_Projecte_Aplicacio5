@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:layout_weight="0.2">
+            android:layout_weight="0.15">
 
             <TextView
                 android:layout_width="match_parent"
@@ -74,7 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -121,10 +122,11 @@
                     android:layout_height="wrap_content"
                     android:text="10"
                     android:textSize="40sp"/>
+
                 <com.google.android.material.slider.Slider
                     android:id="@+id/aOPSlider"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
 
@@ -132,13 +134,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:layout_weight="0.2">
+            android:layout_weight="0.25">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="?attr/subHeader"
-                android:layout_weight="1">
+                android:layout_weight="0.35">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -151,36 +153,44 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight="1">
+                android:orientation="vertical"
+                android:layout_weight="0.65"
+                android:padding="5dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Usa fondo blanco y texto oscuro para leer mejor con mucha luz"
-                    android:layout_weight="0.7"/>
-                <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:checked="true"
-                    android:layout_weight="0.3"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Usa colores oscuros para cansar menos la vista"
-                    android:layout_weight="0.7"/>
-                <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:checked="true"
-                    android:layout_weight="0.3"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Usa fondo blanco y texto oscuro para leer mejor con mucha luz"
+                        android:layout_weight="0.7"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.3"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Usa colores oscuros para cansar menos la vista"
+                        android:layout_weight="0.7"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.3"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -206,7 +216,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
