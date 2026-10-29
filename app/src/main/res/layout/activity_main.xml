@@ -21,7 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/logo"
-            android:textSize="90sp"
+            android:padding="10dp"
+            android:textSize="80sp"
             android:layout_weight="0.8"
             android:textColor="?attr/headerText"/>
         <ImageView
