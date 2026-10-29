@@ -8,99 +8,337 @@
     tools:context=".OptionPrivacyActivity">
 
     <LinearLayout
-        android:id="@+id/aOSTitle"
+        android:id="@+id/aOPrTitle"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="90dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/aOSBody"
+        app:layout_constraintBottom_toTopOf="@+id/aOPrBody"
         android:gravity="center"
         android:background="?attr/headerLink">
 
-        <ImageView
-            android:id="@+id/aOPBack"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/back_24dp"
-            android:layout_weight="0.2"/>
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/opcionPrivacidad"
             android:textSize="50sp"
-            android:layout_weight="0.9"
-            android:textColor="?attr/headerText"/>
+            android:layout_weight="0.8"
+            android:textColor="?attr/headerText"
+            android:gravity="center"/>
+        <LinearLayout
+            android:id="@+id/aOPrClose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@drawable/close_24dp"
+                android:layout_weight="0.7"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Cerrar"
+                android:textSize="20sp"
+                android:textColor="?attr/headerText"
+                android:layout_weight="0.3"
+                android:gravity="center"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/aOPrBody"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/aOSBody"
-        app:layout_constraintTop_toBottomOf="@+id/aOSTitle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aOPrTitle"
+        app:layout_constraintBottom_toTopOf="@+id/aOPrFooter"
         android:orientation="vertical"
-        android:background="?attr/body"
-        android:paddingStart="10dp"
-        android:paddingTop="15dp">
+        android:background="?attr/body">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Permisos"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="?attr/subHeader"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:src="@drawable/contacts_24dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Contactos"
+                            android:layout_weight="0.6"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/camera_24dp"
+                            android:layout_weight="0.4"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Camara"
+                            android:layout_weight="0.6"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/mic_24dp"
+                            android:layout_weight="0.4"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Micrófono"
+                            android:layout_weight="0.6"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sms_24dp"
+                            android:layout_weight="0.4"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="SMS"
+                            android:layout_weight="0.6"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calendar_24dp"
+                            android:layout_weight="0.4"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Calendario"
+                            android:layout_weight="0.6"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Compartir datos de uso"
-                android:textSize="30sp"/>
-        </LinearLayout>
+                android:text="Ajustes de consentimiento de privacidad"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="?attr/subHeaderText"
+                android:background="?attr/subHeader"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-        <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:text="Tu ubicación general (país y ciudad) nos ayudan a ofrecerte una experiencia localizada"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:text="Puedes decidir si Cookly te muestra contenido y recomendaciones que son más relevantes para ti"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:text="Los intereses generales según las recetas que puedes visualizar o buscar"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:text="Puedes elegir si las recetas que ves están personalizados según cosas como las preferencia de interés"/>
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:layout_weight="0.2"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aOPrFooter"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toBottomOf="@+id/aOPrBody"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?attr/footer"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/aOPrAccept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Incognito"
-                android:textSize="30sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Borrar historial"
-                android:textSize="30sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Política de privacidad"
-                android:textSize="30sp"/>
-        </LinearLayout>
+            android:text="Aceptar"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

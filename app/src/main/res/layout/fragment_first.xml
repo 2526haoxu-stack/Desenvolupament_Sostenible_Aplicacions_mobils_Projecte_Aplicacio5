@@ -13,8 +13,5 @@
         android:background="?attr/body"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:itemCount="8">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
+        tools:itemCount="8"/>
 </FrameLayout>

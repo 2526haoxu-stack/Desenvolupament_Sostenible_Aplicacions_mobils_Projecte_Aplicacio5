@@ -3,20 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MyRecipeFragment">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/body"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/recipe_item"
+        tools:itemCount="15"/>
+
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/body"
         android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Estas en la pagina de mis recetas"/>
+            android:text="Mis recetas"
+            android:background="?attr/subHeader"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
 
-    </LinearLayout>
-
-
-
+    </LinearLayout>-->
 </FrameLayout>

@@ -2,14 +2,17 @@ package com.example.activitat_05
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class OptionSecurityActivity : AppCompatActivity() {
-    lateinit var back : ImageView
+    lateinit var close : LinearLayout
+    lateinit var buttonAccept : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,14 +25,21 @@ class OptionSecurityActivity : AppCompatActivity() {
         }
 
         // Relacionar variables con los id's --> Start
-        back = findViewById(R.id.aOSBack)
+        close = findViewById(R.id.aOSClose)
+        buttonAccept = findViewById(R.id.aOSAccept)
 
         // rV --> End
 
         // Funciones --> Start
-        back.setOnClickListener {
+        close.setOnClickListener {
             var intent = Intent(this, SettingActivity::class.java)
             startActivity(intent)
         }
+
+        buttonAccept.setOnClickListener {
+            var intent = Intent(this, SettingActivity::class.java)
+            startActivity(intent)
+        }
+        // f --> End
     }
 }
