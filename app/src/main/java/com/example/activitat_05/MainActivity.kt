@@ -2,15 +2,19 @@ package com.example.activitat_05
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
-    lateinit var buttonSetting : ImageView
+    lateinit var toolbar : Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +26,13 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
             insets
         }
 
+        toolbar = findViewById(R.id.my_toolbar)
+        // 1. Configura la Toolbar com l'Action Bar del sistema
+        setSupportActionBar(toolbar)
+
+        // Opcional: Estableix un títol
+        supportActionBar?.title = "La Meva App"
+
         // Fragment inicial (solo la primera vez, no al girar la pantalla)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -30,15 +41,12 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
         }
 
         // Relacionar las variables con los id's --> Start
-        buttonSetting = findViewById(R.id.aMSetting)
+
 
         // rV --> End
 
         // Funciones --> Start
-        buttonSetting.setOnClickListener {
-            var intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
-        }
+//
 
         // f --> End
 
@@ -76,6 +84,32 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
         }
         // fNF --> End
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_appbar, menu)
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.setting -> {
+                var intent = Intent(this, SettingActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.changeCount -> {
+                var intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.signOut -> {
+                var intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
 
