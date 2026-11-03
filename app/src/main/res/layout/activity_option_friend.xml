@@ -7,50 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".OptionFriendActivity">
 
-    <LinearLayout
-        android:id="@+id/aOFTitle"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/aOFBody"
-        android:background="?attr/headerLink">
+        android:background="?attr/headerLink"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/opcionAmigos"
-            android:textSize="50sp"
-            android:layout_weight="0.8"
-            android:textColor="?attr/headerText"
-            android:gravity="center"/>
-        <LinearLayout
-            android:id="@+id/aOFClose"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:src="@drawable/close_24dp"
-                android:layout_weight="0.7"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="Cerrar"
-                android:textSize="20sp"
+                android:id="@+id/aOFTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/aOFClose"
+                android:text="@string/opcionAmigos"
+                android:textSize="47sp"
+                app:layout_constraintHorizontal_weight="0.8"
                 android:textColor="?attr/headerText"
-                android:layout_weight="0.3"
                 android:gravity="center"/>
-        </LinearLayout>
-    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aOFClose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/aOFTitle"
+                android:orientation="vertical"
+                app:layout_constraintHorizontal_weight="0.2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/close_24dp"
+                    android:layout_weight="0.7"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/closePage"
+                    android:textSize="20sp"
+                    android:textColor="?attr/headerText"
+                    android:layout_weight="0.3"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/aOFBody"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/aOFTitle"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         android:padding="10dp"
         android:background="?attr/body"

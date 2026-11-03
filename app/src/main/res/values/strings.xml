@@ -38,5 +38,6 @@
     <string name="opcionIdiomas">Idioma</string>
     <string name="opcionCerrarDeSesion">Cerrar de sesión</string>
     <string name="opcionCambiarDeCuenta">Cambiar de cuenta</string>
+    <string name="closePage">Cerrar</string>
 
 </resources>

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -14,7 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
-    lateinit var toolbar : Toolbar
+    lateinit var aMToolbar : Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,14 +24,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        toolbar = findViewById(R.id.my_toolbar)
-        // 1. Configura la Toolbar com l'Action Bar del sistema
-        setSupportActionBar(toolbar)
-
-        // Opcional: Estableix un títol
-        supportActionBar?.title = "La Meva App"
-
         // Fragment inicial (solo la primera vez, no al girar la pantalla)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -41,12 +32,12 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
         }
 
         // Relacionar las variables con los id's --> Start
-
+        aMToolbar = findViewById(R.id.my_toolbar)
 
         // rV --> End
 
         // Funciones --> Start
-//
+        setSupportActionBar(aMToolbar)
 
         // f --> End
 
@@ -96,16 +87,19 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
             R.id.setting -> {
                 var intent = Intent(this, SettingActivity::class.java)
                 startActivity(intent)
+                Toast.makeText(this, "Has entrado a la configuración", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.changeCount -> {
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
+                Toast.makeText(this, "Has cerrado la sesión para cambiar de cuenta", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.signOut -> {
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
+                Toast.makeText(this, "Has cerrado la sesión", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
