@@ -91,6 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:hint="Nueva contraseña"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -101,6 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:hint="Confirma la nueva contraseña"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -177,6 +179,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:hint="Nuevo número de teléfono"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -187,6 +190,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:hint="Confirma el número de teléfono"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -217,9 +221,10 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.8"
-                    android:text="Se borrarán tu perfil, tus datos personales y eliminará la cuenta de manera permanente"/>
+                    android:layout_height="wrap_content"
+                    android:text="Se borrarán tu perfil, tus datos personales y eliminará la cuenta de manera permanente"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.8" />
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

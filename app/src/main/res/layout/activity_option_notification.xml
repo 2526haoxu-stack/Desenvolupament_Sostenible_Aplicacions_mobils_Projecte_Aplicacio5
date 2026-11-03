@@ -45,11 +45,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:src="@drawable/close_24dp"
+                    android:contentDescription="@string/salir_de_la_pagina"
                     android:layout_weight="0.7"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="Cerrar"
+                    android:text="@string/closePage"
                     android:textSize="20sp"
                     android:textColor="?attr/headerText"
                     android:layout_weight="0.3"
@@ -76,7 +77,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Temporizador"
+                android:text="@string/temporizador"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:background="?attr/subHeader"
@@ -89,8 +90,10 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Mensaje de la notificación">
+                    android:layout_height="0dp"
+                    android:hint="@string/mensaje_de_la_notificacion"
+                    android:layout_weight="0.33"
+                    android:gravity="center">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -98,24 +101,33 @@
                 </com.google.android.material.textfield.TextInputLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center">
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.3">
 
                     <TextView
                         android:id="@+id/aONSliderText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="@string/valor_0"
                         android:textSize="40sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="min"/>
+                        android:text="@string/min"/>
                 </LinearLayout>
-                <com.google.android.material.slider.Slider
-                    android:id="@+id/aONSlider"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/aONSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
 
@@ -129,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/subHeader"
-                android:text="recomendaciones para ti"
+                android:text="@string/recomendaciones_para_ti"
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:gravity="center"/>
@@ -141,8 +153,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Según lo que cocinas, te sugerimos platos con ingredientes y sabores similares"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seg_n_lo_que_cocinas_te_sugerimos_platos_con_ingredientes_y_sabores_similares"
                     android:layout_weight="0.7"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:layout_width="0dp"
@@ -161,7 +173,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="recetas de chefs que sigues"
+                android:text="@string/recetas_de_chefs_que_sigues"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:background="?attr/subHeader"
@@ -174,8 +186,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Recibe una notificación al instante cuando los chefs que sigues publiquen una receta nueva"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recibe_una_notificaci_n_al_instante_cuando_los_chefs_que_sigues_publiquen_una_receta_nueva"
                     android:layout_weight="0.7"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:layout_width="0dp"
@@ -195,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/subHeader"
-                android:text="receta del dia"
+                android:text="@string/receta_del_dia"
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:gravity="center"/>
@@ -207,8 +219,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="Verás recetas del dia pasado las 6 de la mañana"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ver_s_recetas_del_dia_pasado_las_6_de_la_ma_ana"
                     android:layout_weight="0.7"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:layout_width="0dp"
@@ -233,6 +245,6 @@
             android:id="@+id/aONAccept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aceppt"/>
+            android:text="@string/textoAceptarDelBoton"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

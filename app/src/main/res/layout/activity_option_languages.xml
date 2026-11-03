@@ -44,6 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:src="@drawable/close_24dp"
+                    android:contentDescription="@string/salir_de_la_pagina"
                     android:layout_weight="0.7"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -85,7 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Castellano"
+                    android:text="@string/castellano_aOL"
                     android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -108,8 +109,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Català"
-                    android:textSize="40dp"/>
+                    android:text="@string/catala_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -131,8 +132,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="English"
-                    android:textSize="40dp"/>
+                    android:text="@string/english_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -154,8 +155,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="French"
-                    android:textSize="40dp"/>
+                    android:text="@string/french_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -177,8 +178,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Galego"
-                    android:textSize="40dp"/>
+                    android:text="@string/galego_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -200,8 +201,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ruso"
-                    android:textSize="40dp"/>
+                    android:text="@string/ruso_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -222,8 +223,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chino"
-                    android:textSize="40dp"/>
+                    android:text="@string/chino_aOL"
+                    android:textSize="40sp"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
@@ -243,7 +244,7 @@
             android:id="@+id/aOLAccept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aceptar"/>
+            android:text="@string/textoAceptarDelBoton"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

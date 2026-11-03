@@ -90,7 +90,7 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Mantiene la pantalla siempre encendida mientras cocinas"
                     android:layout_weight="0.7"/>
 
@@ -116,7 +116,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tamaño de letra"
+                    android:text="Tamaño de la letra"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
@@ -149,9 +149,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="?attr/subHeader"
-                android:layout_weight="0.35">
+                android:layout_height="wrap_content"
+                android:background="?attr/subHeader">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -176,7 +175,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="Usa fondo blanco y texto oscuro para leer mejor con mucha luz"
                         android:layout_weight="0.7"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -193,7 +192,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="Usa colores oscuros para cansar menos la vista"
                         android:layout_weight="0.7"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -226,9 +225,10 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -242,8 +242,9 @@
                         android:text="Peso"/>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -257,7 +258,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Gramos (g)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -274,7 +275,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Kilogramos (kg)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -291,7 +292,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Gramos (g)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -308,7 +309,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Onzas (oz)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -327,8 +328,9 @@
                         android:text="Volumen"/>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -342,7 +344,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Mililitros (ml)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -359,7 +361,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Litros (l)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -376,7 +378,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Centilitros (cl)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -393,7 +395,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Taza (cup)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -412,8 +414,9 @@
                         android:text="Cucharas"/>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -427,7 +430,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Cucharadita (tsp)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -444,7 +447,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Cucharada (tbsp)"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>
@@ -461,7 +464,7 @@
                                 android:layout_weight="0.2"/>
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="Cucharada de postre"
                                 android:gravity="center_vertical"
                                 android:layout_weight="0.8"/>

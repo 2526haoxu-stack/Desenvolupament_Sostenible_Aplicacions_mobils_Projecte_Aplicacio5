@@ -259,9 +259,10 @@
                 android:gravity="center"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -271,7 +272,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.8"
                         android:text="Tu ubicación general (país y ciudad) nos ayudan a ofrecerte una experiencia localizada"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -288,7 +289,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.8"
                         android:text="Puedes decidir si Cookly te muestra contenido y recomendaciones que son más relevantes para ti"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -305,7 +306,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.8"
                         android:text="Los intereses generales según las recetas que puedes visualizar o buscar"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -322,7 +323,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="0.8"
                         android:text="Puedes elegir si las recetas que ves están personalizados según cosas como las preferencia de interés"/>
                     <com.google.android.material.materialswitch.MaterialSwitch

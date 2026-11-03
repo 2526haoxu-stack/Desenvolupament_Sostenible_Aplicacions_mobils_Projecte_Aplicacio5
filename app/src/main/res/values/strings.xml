@@ -39,5 +39,26 @@
     <string name="opcionCerrarDeSesion">Cerrar de sesión</string>
     <string name="opcionCambiarDeCuenta">Cambiar de cuenta</string>
     <string name="closePage">Cerrar</string>
+    <string name="salir_de_la_pagina">Salir de la pagina</string>
+    <string name="castellano_aOL">Castellano</string>
+    <string name="catala_aOL">Català</string>
+    <string name="english_aOL">English</string>
+    <string name="french_aOL">French</string>
+    <string name="galego_aOL">Galego</string>
+    <string name="ruso_aOL">Ruso</string>
+    <string name="chino_aOL">Chino</string>
+    <string name="textoAceptarDelBoton">Aceptar</string>
+    <string name="textoDelBuscardorAmigos">Buscar amigo por nombre</string>
+    <string name="solicitudes_de_amistad">Solicitudes de amistad</string>
+    <string name="temporizador">Temporizador</string>
+    <string name="mensaje_de_la_notificacion">Mensaje de la notificación</string>
+    <string name="valor_0">0</string>
+    <string name="min">min</string>
+    <string name="recomendaciones_para_ti">recomendaciones para ti</string>
+    <string name="seg_n_lo_que_cocinas_te_sugerimos_platos_con_ingredientes_y_sabores_similares">Según lo que cocinas, te sugerimos platos con ingredientes y sabores similares</string>
+    <string name="recetas_de_chefs_que_sigues">recetas de chefs que sigues</string>
+    <string name="recibe_una_notificaci_n_al_instante_cuando_los_chefs_que_sigues_publiquen_una_receta_nueva">Recibe una notificación al instante cuando los chefs que sigues publiquen una receta nueva</string>
+    <string name="receta_del_dia">receta del dia</string>
+    <string name="ver_s_recetas_del_dia_pasado_las_6_de_la_ma_ana">Verás recetas del dia pasado las 6 de la mañana</string>
 
 </resources>
