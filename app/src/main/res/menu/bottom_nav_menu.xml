@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aMHome"
+        android:title="@string/home"
+        android:icon="@drawable/home_24dp">
+    </item>
+
+    <item
+        android:id="@+id/aMHelp"
+        android:icon="@drawable/help_24dp"
+        android:title="@string/help">
+    </item>
+    <item
+        android:id="@+id/aMProfile"
+        android:icon="@drawable/profile_24dp"
+        android:title="@string/myprofile"
+        />
+    <item
+        android:id="@+id/aMMyRecipe"
+        android:title="@string/myrecipes"
+        android:icon="@drawable/list_24dp"/>
+</menu>

@@ -6,11 +6,15 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.util.LocalePreferences
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
     lateinit var buttonSetting : ImageView
+    lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +79,26 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
                 .commit()
         }
         // fNF --> End
+
+        //MENU
+        bottomNav = findViewById(R.id.footer)
+
+        bottomNav.setOnItemSelectedListener { item ->
+            val selFrag: Fragment? = when (item.itemId) {
+                R.id.aMHelp -> HelpFragment()
+                R.id.aMHome -> firstFragment()
+                R.id.aMProfile -> ProfileFragment()
+                R.id.aMMyRecipe -> MyRecipeFragment()
+                else -> null
+            }
+
+            if(selFrag != null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, selFrag)
+                    .commit()
+            }
+            true
+        }
 
     }
 
