@@ -4,7 +4,7 @@
     <!-- PALETA MODE CLAR (Vibrant Violet Style)    -->
     <!-- ========================================== -->
 
-    <color name="headerLink">#E67E22</color>
+    <color name="headerLink">#CF6A1A</color>
     <color name="headerText">#FFFFFF</color>
     <color name="subtitle">#F9EBDC</color>
     <color name="subtitleText">#5D4037</color>
@@ -12,6 +12,7 @@
     <color name="footer">#F5D9C4</color>
     <color name="textGeneral">#5D4037</color>
     <color name="black">#000000</color>
+    <color name="editTextFieldColor">#A04000</color>
 
 
     <!-- ========================================== -->
@@ -26,7 +27,7 @@
     <color name="bodyFosc">#1E1810</color>
     <color name="footerFosc">#33281C</color>
     <color name="textGeneralFosc">#F5E6D3</color>
-
+    <color name="editTextFieldColorFosc">#F9B26E</color>
 
     Text sobre superfícies fosques (Blanc gairebé pur) -->
     <color name="text_sobre_superficie_fosc">#FFF4F4F5</color>

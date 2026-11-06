@@ -82,7 +82,8 @@
                 <CheckBox
                     android:id="@+id/aOLSpanish"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/castellano_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,7 +106,8 @@
                 <CheckBox
                     android:id="@+id/aOLCatalan"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/catala_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -128,7 +130,8 @@
                 <CheckBox
                     android:id="@+id/aOLEnglish"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/english_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -151,7 +154,8 @@
                 <CheckBox
                     android:id="@+id/aOLFrench"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/french_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -174,7 +178,8 @@
                 <CheckBox
                     android:id="@+id/aOLGalician"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/galego_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -197,7 +202,8 @@
                 <CheckBox
                     android:id="@+id/aOLRussian"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/ruso_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -219,7 +225,8 @@
                 <CheckBox
                     android:id="@+id/aOLChiness"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/chino_aOL"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -242,9 +249,10 @@
 
         <Button
             android:id="@+id/aOLAccept"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="@string/textoAceptarDelBoton"/>
+            android:text="@string/textoAceptarDelBoton"
+            android:textColor="?attr/black"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

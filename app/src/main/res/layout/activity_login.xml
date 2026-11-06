@@ -24,24 +24,39 @@
             android:padding="16dp">
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="@string/login"
                 android:textStyle="bold"
-                android:textSize="46sp"/>
-            <EditText
+                android:textSize="46sp"
+                android:layout_weight="0.3"/>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input_view"
-                android:layout_margin="10dp"
+                android:layout_height="0dp"
                 android:hint="@string/username"
-                android:padding="12dp"/>
-            <EditText
+                app:hintTextColor="?attr/editTextFieldColor"
+                android:textColorHint="?attr/editTextFieldColor"
+                android:layout_weight="0.3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="?attr/textGeneral"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input_view"
-                android:layout_margin="10dp"
+                android:layout_height="0dp"
                 android:hint="@string/password"
-                android:padding="12dp"/>
+                app:hintTextColor="?attr/editTextFieldColor"
+                android:textColorHint="?attr/editTextFieldColor"
+                android:layout_weight="0.3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="?attr/textGeneral"/>
+            </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/aMEnter"
                 android:layout_width="match_parent"

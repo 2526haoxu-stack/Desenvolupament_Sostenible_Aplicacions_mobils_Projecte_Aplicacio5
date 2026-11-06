@@ -44,11 +44,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:src="@drawable/close_24dp"
+                    android:contentDescription="@string/salir_de_la_pagina"
                     android:layout_weight="0.7"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="Cerrar"
+                    android:text="@string/closePage"
                     android:textSize="20sp"
                     android:textColor="?attr/headerText"
                     android:layout_weight="0.3"
@@ -75,7 +76,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Modo cocina"
+                android:text="@string/modo_cocina"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="?attr/subHeaderText"
@@ -91,14 +92,14 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Mantiene la pantalla siempre encendida mientras cocinas"
-                    android:layout_weight="0.7"/>
+                    android:text="@string/mantiene_la_pantalla_siempre_encendida_mientras_cocinas"
+                    android:layout_weight="1"/>
 
                 <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:checked="true"
-                    android:layout_weight="0.3"/>
+                    android:contentDescription="@string/modo_cocina"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -116,7 +117,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tamaño de la letra"
+                    android:text="@string/tama_o_de_la_letra"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
@@ -131,7 +132,7 @@
                     android:id="@+id/aOPSliderText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10"
+                    android:text="@string/Valor_10"
                     android:textSize="40sp"/>
 
                 <com.google.android.material.slider.Slider
@@ -155,7 +156,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tema claro u oscuro"
+                    android:text="@string/tema_claro_u_oscuro"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
@@ -164,8 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical"
-                android:layout_weight="0.65"
-                android:padding="5dp">
+                android:layout_weight="0.65">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -176,13 +176,14 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Usa fondo blanco y texto oscuro para leer mejor con mucha luz"
-                        android:layout_weight="0.7"/>
+                        android:text="@string/usa_fondo_blanco_y_texto_oscuro_para_leer_mejor_con_mucha_luz"
+                        android:padding="5dp"
+                        android:layout_weight="1"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:checked="true"
-                        android:layout_weight="0.3"/>
+                        android:contentDescription="@string/tema_claro"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -193,13 +194,14 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Usa colores oscuros para cansar menos la vista"
-                        android:layout_weight="0.7"/>
+                        android:text="@string/usa_colores_oscuros_para_cansar_menos_la_vista"
+                        android:padding="5dp"
+                        android:layout_weight="1"/>
                     <com.google.android.material.materialswitch.MaterialSwitch
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:checked="true"
-                        android:layout_weight="0.3"/>
+                        android:contentDescription="@string/tema_oscuro" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -218,7 +220,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Unidades de medida"
+                    android:text="@string/unidades_de_medida"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
@@ -239,7 +241,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Peso"/>
+                        android:text="@string/peso"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -255,13 +257,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Gramos (g)"
+                                android:text="@string/gramos_g"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -272,13 +274,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Kilogramos (kg)"
+                                android:text="@string/kilogramos_kg"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -289,13 +291,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Gramos (g)"
+                                android:text="@string/libras_lb"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -306,13 +308,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Onzas (oz)"
+                                android:text="@string/onzas_oz"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -325,7 +327,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Volumen"/>
+                        android:text="@string/volumen"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -341,13 +343,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Mililitros (ml)"
+                                android:text="@string/mililitros_ml"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -358,13 +360,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Litros (l)"
+                                android:text="@string/litros_l"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -375,13 +377,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Centilitros (cl)"
+                                android:text="@string/centilitros_cl"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -392,13 +394,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Taza (cup)"
+                                android:text="@string/taza_cup"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -411,7 +413,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cucharas"/>
+                        android:text="@string/cucharas"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -427,13 +429,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Cucharadita (tsp)"
+                                android:text="@string/cucharadita_tsp"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -444,13 +446,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Cucharada (tbsp)"
+                                android:text="@string/cucharada_tbsp"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -461,13 +463,13 @@
                             <CheckBox
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.4"/>
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Cucharada de postre"
+                                android:text="@string/cucharada_de_postre"
                                 android:gravity="center_vertical"
-                                android:layout_weight="0.8"/>
+                                android:layout_weight="0.6"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -487,9 +489,10 @@
 
         <Button
             android:id="@+id/aOPAccept"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="Aceptar"/>
+            android:text="@string/textoAceptarDelBoton"
+            android:textColor="?attr/black"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

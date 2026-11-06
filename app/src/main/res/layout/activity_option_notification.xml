@@ -96,7 +96,7 @@
                     android:gravity="center">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                        android:layout_width="380dp"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <LinearLayout
@@ -155,12 +155,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/seg_n_lo_que_cocinas_te_sugerimos_platos_con_ingredientes_y_sabores_similares"
-                    android:layout_weight="0.7"/>
+                    android:layout_weight="1"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:checked="true"
-                    android:layout_weight="0.3"/>
+                    android:contentDescription="@string/recomendaciones_para_ti"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -188,12 +188,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/recibe_una_notificaci_n_al_instante_cuando_los_chefs_que_sigues_publiquen_una_receta_nueva"
-                    android:layout_weight="0.7"/>
+                    android:layout_weight="1"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:checked="true"
-                    android:layout_weight="0.3"/>
+                    android:contentDescription="@string/recetas_de_chefs_que_sigues"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -221,12 +221,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/ver_s_recetas_del_dia_pasado_las_6_de_la_ma_ana"
-                    android:layout_weight="0.7"/>
+                    android:layout_weight="1"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:checked="true"
-                    android:layout_weight="0.3"/>
+                    android:contentDescription="@string/receta_del_dia"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -243,8 +243,9 @@
 
         <Button
             android:id="@+id/aONAccept"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="@string/textoAceptarDelBoton"/>
+            android:text="@string/textoAceptarDelBoton"
+            android:textColor="?attr/black"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

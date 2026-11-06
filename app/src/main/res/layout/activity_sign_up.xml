@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@id/Footer"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="10dp"
+        android:padding="24dp"
         android:background="?attr/body">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -134,11 +134,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
 
         </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -150,12 +148,13 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="10dp"
+        android:weightSum="1"
         android:background="?attr/footer">
         <Button
             android:id="@+id/aSSignUpButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:text="@string/sign_up"
+            android:text="@string/clickar_para_registrarte"
             android:textSize="24sp"
             android:textColor="?attr/headerText"/>
 
@@ -170,14 +169,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ya_tienes_una_cuenta"
                 android:textSize="18sp"
-                android:paddingRight="5dp"/>
+                android:paddingEnd="5dp"/>
 
             <TextView
                 android:id="@+id/aSBackLogIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/log_in"
-                android:textColor="?attr/headerLink"
+                android:textColor="?attr/textGeneral"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>

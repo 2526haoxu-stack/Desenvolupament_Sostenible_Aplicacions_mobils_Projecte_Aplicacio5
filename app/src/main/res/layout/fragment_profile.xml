@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/body"
     tools:context=".ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/body"
         android:orientation="vertical">
 
         <LinearLayout
@@ -27,7 +27,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="Perfil"
+                    android:text="@string/titulo_perfil"
                     android:textSize="40sp"
                     android:layout_weight="0.9"
                     android:gravity="center"/>
@@ -35,6 +35,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/edit_24dp"
+                    android:contentDescription="@string/boton_de_editar"
                     android:layout_weight="0.1"/>
             </LinearLayout>
             <LinearLayout
@@ -47,7 +48,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/profile_24dp"
-                    android:layout_weight="0.9"/>
+                    android:layout_weight="0.9"
+                    android:contentDescription="@string/foto_de_tu_perfil"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,12 +60,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Harry Potter "
+                    android:text="@string/nombre_en_tu_perfil"
                     android:textSize="25sp"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/male_24dp"/>
+                    android:src="@drawable/male_24dp"
+                    android:contentDescription="@string/el_genero"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,12 +78,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22 "
+                    android:text="@string/Valor_22"
                     android:textSize="25sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="años"
+                    android:text="@string/anyos"
                     android:textSize="25sp"/>
             </LinearLayout>
 
@@ -89,6 +92,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:baselineAligned="false"
             android:orientation="horizontal"
             android:layout_weight="0.2">
 
@@ -101,7 +105,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="0"
+                    android:text="@string/valor_0"
                     android:textSize="55sp"
                     android:layout_weight="0.5"
                     android:gravity="center_horizontal"/>
@@ -109,7 +113,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="Amigos"
+                    android:text="@string/opcionAmigos"
                     android:textSize="28sp"
                     android:layout_weight="0.5"
                     android:gravity="center"/>
@@ -124,7 +128,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="0"
+                    android:text="@string/valor_0"
                     android:textSize="55sp"
                     android:layout_weight="0.5"
                     android:gravity="center_horizontal"/>
@@ -132,7 +136,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="Recetas Publicadas"
+                    android:text="@string/recetas_publicadas"
                     android:textSize="28sp"
                     android:layout_weight="0.5"
                     android:gravity="center_horizontal"/>
@@ -148,15 +152,18 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="Sobre Mí"
-                android:textSize="35sp"
-                android:layout_weight="2"/>
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_sobre_mi"
+                android:textSize="35sp"/>
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="Soy una persona a la que le encanta cocinar y compartir lo que prepara. Desde pequeño/a disfruto en la cocina, probando recetas tradicionales y reinventándolas con mi toque personal. Me gusta tanto la cocina casera de toda la vida como probar platos de otras culturas. Aquí guardo mis recetas favoritas, mis trucos y mis creaciones para que cualquiera pueda cocinarlas en casa. Si tú también crees que la mejor manera de reunir a la gente es alrededor de una mesa, ¡bienvenido/a!"
-                android:layout_weight="8"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxWidth="400dp"
+                android:text="@string/contenido_sobre_mi"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"/>
         </LinearLayout>
     </LinearLayout>
 

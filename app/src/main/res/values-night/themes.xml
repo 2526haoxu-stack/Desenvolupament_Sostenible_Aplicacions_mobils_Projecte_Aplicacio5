@@ -11,9 +11,10 @@
 
         <item name="footer">@color/footerFosc</item>
 
-        <item name="android:textColor">@color/textGeneralFosc</item>
+        <item name="textGeneral">@color/textGeneralFosc</item>
 
         <item name="headerText">@color/headerTextFosc</item>
         <item name="colorOnPrimary">@color/headerTextFosc</item>
+        <item name="editTextFieldColor">@color/editTextFieldColorFosc</item>
     </style>
 </resources>

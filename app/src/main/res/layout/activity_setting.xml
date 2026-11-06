@@ -28,7 +28,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/back_24dp"
-                android:layout_weight="0.2"/>
+                android:layout_weight="0.2"
+                android:contentDescription="@string/volver_hacia_atras"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -47,7 +48,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="vertical"
         android:paddingTop="15dp"
-        android:paddingStart="30dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="0dp"
         android:background="?attr/body">
 
         <LinearLayout
@@ -60,7 +62,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/language_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_idiomas"/>
             <TextView
                 android:id="@+id/aSOptionLanguagesText"
                 android:layout_width="wrap_content"
@@ -79,7 +83,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/lock_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_candado"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -96,8 +102,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/privacy_tip_24dp"
-                android:paddingEnd="20dp"/>
+                android:src="@drawable/privacy_24dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_privacidad"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,7 +123,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/notifications_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_notificacion"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -133,7 +143,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/preference_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_preferencia"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -150,8 +162,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/friend_24dp"
-                android:paddingEnd="20dp"/>
+                android:src="@drawable/friends_24dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_amigos"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
