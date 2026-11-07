@@ -85,19 +85,19 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.setting -> {
-                var intent = Intent(this, SettingActivity::class.java)
+                val intent = Intent(this, SettingActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Has entrado a la configuración", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.changeCount -> {
-                var intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Has cerrado la sesión para cambiar de cuenta", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.signOut -> {
-                var intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Has cerrado la sesión", Toast.LENGTH_SHORT).show()
                 true
