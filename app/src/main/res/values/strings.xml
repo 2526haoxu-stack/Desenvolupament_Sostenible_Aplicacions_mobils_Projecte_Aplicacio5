@@ -133,7 +133,15 @@
     <string name="el_microfono">el micrófono</string>
     <string name="el_sms">el sms</string>
     <string name="el_calendario">el calendario</string>
-
+    <string name="permiso_de_compartir_tus_contactos">Permiso de usar tus contactos</string>
+    <string name="permiso_de_usar_la_camara_de_tu_dispositivo">Permiso de usar la camara de tu dispositivo</string>
+    <string name="permiso_que_usar_el_microfono_de_tu_dispositivo">Permitir de usar el microfono de tu dispositivo</string>
+    <string name="permiso_para_que_te_llegue_un_mensaje_sms">Permiso para que te llegue un mensaje SMS</string>
+    <string name="permiso_para_que_usen_el_calendario_de_tu_dispositivo">Permiso para que usen el calendario de tu dispositivo</string>
+    <string name="permiso_de_compartir_tu_ubicaci_n">Permiso de compartir tu ubicación</string>
+    <string name="permiso_al_coockly">Permiso al Coockly</string>
+    <string name="permiso_de_mostrate_recetas_parecidas_a_las_que_visualizas">Permiso de mostrate recetas parecidas a las que visualizas</string>
+    <string name="permiso_de_configurar_las_recetas_que_ves">Permiso de configurar las recetas que ves</string>
 
     <!--Actividad de seguridad-->
     <string name="cambiar_la_contrasenya">Cambiar la contraseña</string>
@@ -197,14 +205,11 @@
     <string name="contactanos_por_telefono">Contactanos por Telófono</string>
     <string name="llamanos">Llamanos</string>
 
-    <string name="permiso_de_compartir_tus_contactos">Permiso de usar tus contactos</string>
-    <string name="permiso_de_usar_la_camara_de_tu_dispositivo">Permiso de usar la camara de tu dispositivo</string>
-    <string name="permiso_que_usar_el_microfono_de_tu_dispositivo">Permitir de usar el microfono de tu dispositivo</string>
-    <string name="permiso_para_que_te_llegue_un_mensaje_sms">Permiso para que te llegue un mensaje SMS</string>
-    <string name="permiso_para_que_usen_el_calendario_de_tu_dispositivo">Permiso para que usen el calendario de tu dispositivo</string>
-    <string name="permiso_de_compartir_tu_ubicaci_n">Permiso de compartir tu ubicación</string>
-    <string name="permiso_al_coockly">Permiso al Coockly</string>
-    <string name="permiso_de_mostrate_recetas_parecidas_a_las_que_visualizas">Permiso de mostrate recetas parecidas a las que visualizas</string>
-    <string name="permiso_de_configurar_las_recetas_que_ves">Permiso de configurar las recetas que ves</string>
+    <!--nav Menu-->
+    <string name="ayuda_menu_nav">Ayuda</string>
+    <string name="home_nav_menu">Home</string>
+    <string name="perfil_nav_menu">Perfil</string>
+    <string name="my_recipe_nav_menu">My Recipe</string>
+
 
 </resources>

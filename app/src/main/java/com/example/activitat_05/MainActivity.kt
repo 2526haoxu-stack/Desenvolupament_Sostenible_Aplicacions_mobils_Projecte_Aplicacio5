@@ -4,16 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
     lateinit var aMToolbar : Toolbar
+    lateinit var bottomNav : BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,48 +35,31 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
 
         // Relacionar las variables con los id's --> Start
         aMToolbar = findViewById(R.id.my_toolbar)
-
+        bottomNav = findViewById(R.id.bottom_navigation)
         // rV --> End
 
         // Funciones --> Start
         setSupportActionBar(aMToolbar)
 
+        bottomNav.setOnItemSelectedListener { item ->
+            val selectedFragment: Fragment? = when (item.itemId) {
+                R.id.help_fragment -> HelpFragment()
+                R.id.home_fragment -> firstFragment()
+                R.id.profile_fragment -> ProfileFragment()
+                R.id.my_recipe_fragment -> MyRecipeFragment()
+                else -> null
+            }
+
+            // Realitza la transacció de Fragment manualment
+            if (selectedFragment != null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, selectedFragment)
+                    .commit()
+            }
+            true // Indica que la selecció ha estat gestionada
+        }
+
         // f --> End
-
-        // Funciones para navegar entre los fragmentos --> Start
-        findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, HelpFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMHome).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, firstFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMProfile).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, ProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMMyRecipe).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, MyRecipeFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-        // fNF --> End
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
