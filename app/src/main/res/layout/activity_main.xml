@@ -37,6 +37,7 @@
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="90dp"
+        android:baselineAligned="false"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="horizontal"
         android:background="?attr/footer">
