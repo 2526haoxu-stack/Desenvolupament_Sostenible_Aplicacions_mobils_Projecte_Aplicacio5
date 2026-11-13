@@ -19,7 +19,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/profile_24dp"
-                android:layout_weight="0.2"/>
+                android:layout_weight="0.2"
+                android:contentDescription="@string/perfil_de_una_solicitud_de_amistad"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -29,24 +30,26 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="David"
-                    android:textSize="20dp"/>
+                    android:text="@string/nombre_de_la_solicitud_de_amistad"
+                    android:textSize="20sp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="david_121"
+                    android:text="@string/nombre_de_usuario_de_una_solicitud_de_amistad"
                     android:textSize="15sp"/>
             </LinearLayout>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/check_circle_24dp"
-                android:layout_weight="0.1"/>
+                android:layout_weight="0.1"
+                android:contentDescription="@string/boton_de_aceptar_de_una_solicitud_de_amistad"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/cancel_24dp"
-                android:layout_weight="0.1"/>
+                android:layout_weight="0.1"
+                android:contentDescription="@string/boton_de_rechazar_de_una_solicitud_de_amistad"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

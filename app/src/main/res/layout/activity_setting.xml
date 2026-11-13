@@ -7,39 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".SettingActivity">
 
-    <LinearLayout
-        android:id="@+id/aSTitle"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="60dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/body"
-        android:gravity="center"
-        android:background="?attr/headerLink">
+        app:layout_constraintBottom_toTopOf="@+id/aSBody"
+        android:background="?attr/headerLink"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
-            android:id="@+id/aSBack"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/aSTitle"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/back_24dp"
-            android:layout_weight="0.2"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/configuracion"
-            android:textSize="50sp"
-            android:layout_weight="0.9"
-            android:textColor="?attr/headerText"/>
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/aSBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/back_24dp"
+                android:layout_weight="0.2"
+                android:contentDescription="@string/volver_hacia_atras"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/configuracion"
+                android:textSize="40sp"
+                android:layout_weight="0.8"
+                android:textColor="?attr/headerText"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
-        android:id="@+id/body"
+        android:id="@+id/aSBody"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/aSTitle"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="vertical"
         android:paddingTop="15dp"
-        android:paddingStart="30dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="0dp"
         android:background="?attr/body">
 
         <LinearLayout
@@ -52,7 +62,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/language_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_idiomas"/>
             <TextView
                 android:id="@+id/aSOptionLanguagesText"
                 android:layout_width="wrap_content"
@@ -71,7 +83,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/lock_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_candado"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -88,8 +102,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/privacy_tip_24dp"
-                android:paddingEnd="20dp"/>
+                android:src="@drawable/privacy_24dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_privacidad"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,7 +123,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/notifications_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_notificacion"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,7 +143,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/preference_24dp"
-                android:paddingEnd="20dp"/>
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_preferencia"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,48 +162,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/friend_24dp"
-                android:paddingEnd="20dp"/>
+                android:src="@drawable/friends_24dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:contentDescription="@string/icono_de_amigos"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/opcionAmigos"
-                android:textSize="35sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/aSOChangeCount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/change_count_24dp"
-                android:paddingEnd="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cambiar de cuenta"
-                android:textSize="35sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/aSOLogOut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/logout_24dp"
-                android:paddingEnd="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cerrar de sesión"
                 android:textSize="35sp"/>
         </LinearLayout>
     </LinearLayout>

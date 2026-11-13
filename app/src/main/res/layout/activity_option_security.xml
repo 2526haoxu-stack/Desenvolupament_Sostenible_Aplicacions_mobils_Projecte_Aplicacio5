@@ -7,51 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".OptionSecurityActivity">
 
-    <LinearLayout
-        android:id="@+id/aOSTitle"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/aOSBody"
-        android:orientation="horizontal"
-        android:background="?attr/headerLink">
+        app:layout_constraintBottom_toTopOf="@id/aOSBody"
+        android:background="?attr/headerLink"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/opcionSeguridad"
-            android:textSize="50sp"
-            android:layout_weight="0.8"
-            android:textColor="?attr/headerText"
-            android:gravity="center"/>
-        <LinearLayout
-            android:id="@+id/aOSClose"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:src="@drawable/close_24dp"
-                android:layout_weight="0.7"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="Cerrar"
-                android:textSize="20sp"
+                android:id="@+id/aOSTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/aOSClose"
+                android:text="@string/opcionSeguridad"
+                android:textSize="50sp"
+                app:layout_constraintHorizontal_weight="0.8"
                 android:textColor="?attr/headerText"
-                android:layout_weight="0.3"
                 android:gravity="center"/>
-        </LinearLayout>
-    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aOSClose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/aOSTitle"
+                android:orientation="vertical"
+                app:layout_constraintHorizontal_weight="0.2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/close_24dp"
+                    android:contentDescription="@string/salir_de_la_pagina"
+                    android:layout_weight="0.7"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/closePage"
+                    android:textSize="20sp"
+                    android:textColor="?attr/headerText"
+                    android:layout_weight="0.3"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/aOSBody"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/aOSTitle"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
         app:layout_constraintBottom_toTopOf="@+id/aOSFooter"
         android:background="?attr/body"
         android:orientation="vertical">
@@ -65,7 +77,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cambiar la contraseña"
+                android:text="@string/cambiar_la_contrasenya"
                 android:background="?attr/subHeader"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -79,22 +91,32 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:hint="Nueva contraseña"
+                    android:hint="@string/nueva_contrasenya"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:hint="Confirma la nueva contraseña"
+                    android:hint="@string/confirma_la_nueva_contrasenya"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -107,7 +129,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cambiar correo electrónico"
+                android:text="@string/cambiar_correo_electronico"
                 android:background="?attr/subHeader"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -122,23 +144,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:gravity="center_vertical"
-                    android:hint="Nuevo correo electrónico"
+                    android:hint="@string/nuevo_correo_electronico"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:gravity="center_vertical"
-                    android:hint="Confirma el correo electrónico"
+                    android:hint="@string/confirma_el_correo_electronico"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -151,7 +181,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cambiar número de teléfono"
+                android:text="@string/cambiar_numero_de_telefono"
                 android:background="?attr/subHeader"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -165,35 +195,45 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:hint="Nuevo número de teléfono"
+                    android:hint="@string/nuevo_numero_de_telefono"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:hint="Confirma el número de teléfono"
+                    android:hint="@string/confirma_el_numero_de_telefono"
+                    app:hintTextColor="?attr/editTextFieldColor"
+                    android:textColorHint="?attr/editTextFieldColor"
+                    android:gravity="center"
                     android:layout_weight="1">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:textColor="?attr/textGeneral"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.15"
+            android:layout_weight="0.2"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eliminar cuenta"
+                android:text="@string/eliminar_cuenta"
                 android:background="?attr/subHeader"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -206,14 +246,15 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.8"
-                    android:text="Se borrarán tu perfil, tus datos personales y eliminará la cuenta de manera permanente"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/se_borrar_n_tu_perfil_tus_datos_personales_y_eliminar_la_cuenta_de_manera_permanente"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
                 <com.google.android.material.materialswitch.MaterialSwitch
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:checked="true"
-                    android:layout_weight="0.2"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:checked="true"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -230,8 +271,9 @@
 
         <Button
             android:id="@+id/aOSAccept"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="Aceptar"/>
+            android:text="@string/textoAceptarDelBoton"
+            android:textColor="?attr/black"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

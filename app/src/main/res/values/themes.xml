@@ -11,11 +11,12 @@
 
         <item name="footer">@color/footer</item>
 
-        <item name="android:textColor">@color/textGeneral</item>
+        <item name="textGeneral">@color/textGeneral</item>
 
         <item name="headerText">@color/headerText</item>
         <item name="colorOnPrimary">@color/headerText</item>
         <item name="black">@color/black</item>
+        <item name="editTextFieldColor">@color/editTextFieldColor</item>
     </style>
 
     <style name="Theme.Activitat_05" parent="Base.Theme.Activitat_05" />

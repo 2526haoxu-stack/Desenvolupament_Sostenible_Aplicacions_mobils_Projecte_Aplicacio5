@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/aMHome"
-        android:title="@string/home"
-        android:icon="@drawable/home_24dp">
-    </item>
-
-    <item
-        android:id="@+id/aMHelp"
+        android:id="@+id/help_fragment"
         android:icon="@drawable/help_24dp"
-        android:title="@string/help">
-    </item>
+        android:title="@string/ayuda_menu_nav"
+        app:showAsAction="always"/>
     <item
-        android:id="@+id/aMProfile"
+        android:id="@+id/home_fragment"
+        android:icon="@drawable/home_24dp"
+        android:title="@string/home_nav_menu"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/profile_fragment"
         android:icon="@drawable/profile_24dp"
-        android:title="@string/myprofile"
-        />
+        android:title="@string/perfil_nav_menu"
+        app:showAsAction="always"/>
     <item
-        android:id="@+id/aMMyRecipe"
-        android:title="@string/myrecipes"
-        android:icon="@drawable/list_24dp"/>
+        android:id="@+id/my_recipe_fragment"
+        android:icon="@drawable/list_24dp"
+        android:title="@string/my_recipe_nav_menu"
+        app:showAsAction="always"/>
 </menu>

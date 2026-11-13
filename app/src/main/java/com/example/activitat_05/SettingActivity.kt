@@ -2,9 +2,11 @@ package com.example.activitat_05
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,8 +20,7 @@ class SettingActivity : AppCompatActivity() {
     lateinit var optionNotification : LinearLayout
     lateinit var optionPreference : LinearLayout
     lateinit var optionFriend : LinearLayout
-    lateinit var optionLogOut : LinearLayout
-    lateinit var optionChangeCount : LinearLayout
+    lateinit var aSToolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +40,13 @@ class SettingActivity : AppCompatActivity() {
         optionNotification = findViewById(R.id.aSOptionNotification)
         optionPreference = findViewById(R.id.aSOptionPreference)
         optionFriend = findViewById(R.id.aSOptionFriend)
-        optionChangeCount = findViewById(R.id.aSOChangeCount)
-        optionLogOut = findViewById(R.id.aSOLogOut)
+        aSToolbar = findViewById(R.id.my_toolbar)
 
         // rV --> End
 
         // Funciones --> Start
+        setSupportActionBar(aSToolbar)
+
         buttonBack.setOnClickListener {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -79,17 +81,33 @@ class SettingActivity : AppCompatActivity() {
             var intent = Intent(this, OptionFriendActivity::class.java)
             startActivity(intent)
         }
-
-        optionLogOut.setOnClickListener {
-            var intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-
-        optionChangeCount.setOnClickListener {
-            var intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
         // f --> End
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_appbar, menu)
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.setting -> {
+                var intent = Intent(this, SettingActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.changeCount -> {
+                var intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.signOut -> {
+                var intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

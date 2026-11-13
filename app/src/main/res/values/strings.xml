@@ -30,8 +30,4 @@
     <string name="inici">INICI</string>
     <string name="miperfil">MiPerfil</string>
     <string name="recetas">RECETAS</string>
-    <string name="help">Help</string>
-    <string name="home">Home</string>
-    <string name="myrecipes">MyRecipes</string>
-    <string name="myprofile">MyProfile</string>
 </resources>

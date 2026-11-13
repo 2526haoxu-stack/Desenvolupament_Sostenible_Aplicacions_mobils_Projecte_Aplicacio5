@@ -8,5 +8,6 @@
     <attr name="black" format="color"/>
     <attr name="subHeader" format="color"/>
     <attr name="subHeaderText" format="color"/>
-
+    <attr name="editTextFieldColor" format="color"/>
+    <attr name="textGeneral" format="color"/>
 </resources>
