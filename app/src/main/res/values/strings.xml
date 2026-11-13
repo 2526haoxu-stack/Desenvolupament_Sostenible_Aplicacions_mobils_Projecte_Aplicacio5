@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">Activitat_05</string>
+
+    <!--Main-->
+    <string name="logo">Cookly</string>
+    <string name="inici">Inicio</string>
+    <string name="miperfil">MiPerfil</string>
+    <string name="recetas">MisRecetas</string>
+    <string name="ayuda">Ayuda</string>
+
+    <!--Actividad Login-->
     <string name="login">LOGIN</string>
     <string name="username">Ponga su nombre de usuario</string>
     <string name="password">Ponga su contraseña</string>
     <string name="enter">Entra</string>
     <string name="sign_up">Registrate</string>
+
+    <!--Actividad SignUp-->
     <string name="ya_tienes_una_cuenta">Ya tienes una cuenta?</string>
     <string name="log_in">Log in</string>
     <string name="no_tienes_cuenta">No tienes cuenta?</string>
@@ -15,19 +26,195 @@
     <string name="phoneNumberField">Número de teléfono</string>
     <string name="passwordField">Contraseña</string>
     <string name="passwordAgainField">Confirmar contraseña</string>
+    <string name="clickar_para_registrarte">Registrarte</string>
+
+    <!--Item de la receta-->
     <string name="nombre_comida">SHALIK BRAT</string>
     <string name="nyam">nyam</string>
     <string name="open">open</string>
-    <string name="logo">Cookly</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Actividad Configuración-->
     <string name="opcionAmigos">Amigos</string>
     <string name="opcionPreferencias">Preferencias</string>
     <string name="opcionNotificaciones">Notificaciones</string>
     <string name="opcionPrivacidad">Privacidad</string>
     <string name="opcionSeguridad">Seguridad</string>
-    <string name="configuracion">Configuración</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="opcionIdiomas">Idioma</string>
-    <string name="inici">INICI</string>
-    <string name="miperfil">MiPerfil</string>
-    <string name="recetas">RECETAS</string>
+    <string name="volver_hacia_atras">volver hacia atrás</string>
+    <string name="icono_de_idiomas">icono de idiomas</string>
+    <string name="icono_de_candado">icono de candado</string>
+    <string name="icono_de_privacidad">icono de privacidad</string>
+    <string name="icono_de_notificacion">icono de notificacion</string>
+    <string name="icono_de_preferencia">icono de preferencia</string>
+    <string name="icono_de_amigos">icono de amigos</string>
+
+    <!--Menu del Appbar-->
+    <string name="configuracion">Configuración</string>
+    <string name="opcionCerrarDeSesion">Cerrar de sesión</string>
+    <string name="opcionCambiarDeCuenta">Cambiar de cuenta</string>
+
+    <!--Actividad Idiomas-->
+    <string name="castellano_aOL">Castellano</string>
+    <string name="catala_aOL">Català</string>
+    <string name="english_aOL">English</string>
+    <string name="french_aOL">French</string>
+    <string name="galego_aOL">Galego</string>
+    <string name="ruso_aOL">Ruso</string>
+    <string name="chino_aOL">Chino</string>
+
+    <!--Actividad Amigos-->
+    <string name="textoDelBuscardorAmigos">Buscar amigo por nombre</string>
+    <string name="solicitudes_de_amistad">Solicitudes de amistad</string>
+
+    <!--Actividad Notificacion-->
+    <string name="temporizador">Temporizador</string>
+    <string name="mensaje_de_la_notificacion">Mensaje de la notificación</string>
+    <string name="valor_0">0</string>
+    <string name="min">min</string>
+    <string name="recomendaciones_para_ti">recomendaciones para ti</string>
+    <string name="seg_n_lo_que_cocinas_te_sugerimos_platos_con_ingredientes_y_sabores_similares">Según lo que cocinas, te sugerimos platos con ingredientes y sabores similares</string>
+    <string name="recetas_de_chefs_que_sigues">recetas de chefs que sigues</string>
+    <string name="recibe_una_notificaci_n_al_instante_cuando_los_chefs_que_sigues_publiquen_una_receta_nueva">Recibe una notificación al instante cuando los chefs que sigues publiquen una receta nueva</string>
+    <string name="receta_del_dia">receta del dia</string>
+    <string name="ver_s_recetas_del_dia_pasado_las_6_de_la_ma_ana">Verás recetas del dia pasado las 6 de la mañana</string>
+
+    <!--Elementos general-->
+    <!--Salir de la página-->
+    <string name="closePage">Cerrar</string>
+    <string name="salir_de_la_pagina">Salir de la pagina</string>
+
+    <!--Boton de aceptar-->
+    <string name="textoAceptarDelBoton">Aceptar</string>
+
+
+    <!--Actividad de preferencias-->
+    <string name="modo_cocina">Modo cocina</string>
+    <string name="mantiene_la_pantalla_siempre_encendida_mientras_cocinas">Mantiene la pantalla siempre encendida mientras cocinas</string>
+    <string name="tama_o_de_la_letra">Tamaño de la letra</string>
+    <string name="Valor_10">10</string>
+    <string name="tema_claro_u_oscuro">Tema claro u oscuro</string>
+    <string name="usa_fondo_blanco_y_texto_oscuro_para_leer_mejor_con_mucha_luz">Usa fondo blanco y texto oscuro para leer mejor con mucha luz</string>
+    <string name="usa_colores_oscuros_para_cansar_menos_la_vista">Usa colores oscuros para cansar menos la vista</string>
+    <string name="unidades_de_medida">Unidades de medida</string>
+    <string name="peso">Peso</string>
+    <string name="gramos_g">Gramos (g)</string>
+    <string name="kilogramos_kg">Kilogramos (kg)</string>
+    <string name="libras_lb">Libras (lb)</string>
+    <string name="onzas_oz">Onzas (oz)</string>
+    <string name="mililitros_ml">Mililitros (ml)</string>
+    <string name="litros_l">Litros (l)</string>
+    <string name="centilitros_cl">Centilitros (cl)</string>
+    <string name="taza_cup">Taza (cup)</string>
+    <string name="cucharadita_tsp">Cucharadita (tsp)</string>
+    <string name="cucharada_tbsp">Cucharada (tbsp)</string>
+    <string name="cucharada_de_postre">Cucharada de postre</string>
+    <string name="cucharas">Cucharas</string>
+    <string name="volumen">Volumen</string>
+    <string name="tema_claro">Tema claro</string>
+    <string name="tema_oscuro">Tema oscuro</string>
+
+    <!--Actividad privacidad-->
+    <string name="permisos">Permisos</string>
+    <string name="contactos">Contactos</string>
+    <string name="camara">Camara</string>
+    <string name="microfono">Micrófono</string>
+    <string name="sms">SMS</string>
+    <string name="calendario">Calendario</string>
+    <string name="ajustes_de_consentimiento_de_privacidad">Ajustes de consentimiento de privacidad</string>
+    <string name="tu_ubicaci_n_general_pa_s_y_ciudad_nos_ayudan_a_ofrecerte_una_experiencia_localizada">Tu ubicación general (país y ciudad) nos ayudan a ofrecerte una experiencia localizada</string>
+    <string name="puedes_decidir_si_cookly_te_muestra_contenido_y_recomendaciones_que_son_m_s_relevantes_para_ti">Puedes decidir si Cookly te muestra contenido y recomendaciones que son más relevantes para ti</string>
+    <string name="los_intereses_generales_seg_n_las_recetas_que_puedes_visualizar_o_buscar">Los intereses generales según las recetas que puedes visualizar o buscar</string>
+    <string name="puedes_elegir_si_las_recetas_que_ves_est_n_personalizados_seg_n_cosas_como_las_preferencia_de_inter_s">Puedes elegir si las recetas que ves están personalizados según cosas como las preferencia de interés</string>
+    <string name="la_camara">la cámara</string>
+    <string name="el_contacto">el contacto</string>
+    <string name="el_microfono">el micrófono</string>
+    <string name="el_sms">el sms</string>
+    <string name="el_calendario">el calendario</string>
+    <string name="permiso_de_compartir_tus_contactos">Permiso de usar tus contactos</string>
+    <string name="permiso_de_usar_la_camara_de_tu_dispositivo">Permiso de usar la camara de tu dispositivo</string>
+    <string name="permiso_que_usar_el_microfono_de_tu_dispositivo">Permitir de usar el microfono de tu dispositivo</string>
+    <string name="permiso_para_que_te_llegue_un_mensaje_sms">Permiso para que te llegue un mensaje SMS</string>
+    <string name="permiso_para_que_usen_el_calendario_de_tu_dispositivo">Permiso para que usen el calendario de tu dispositivo</string>
+    <string name="permiso_de_compartir_tu_ubicaci_n">Permiso de compartir tu ubicación</string>
+    <string name="permiso_al_coockly">Permiso al Coockly</string>
+    <string name="permiso_de_mostrate_recetas_parecidas_a_las_que_visualizas">Permiso de mostrate recetas parecidas a las que visualizas</string>
+    <string name="permiso_de_configurar_las_recetas_que_ves">Permiso de configurar las recetas que ves</string>
+
+    <!--Actividad de seguridad-->
+    <string name="cambiar_la_contrasenya">Cambiar la contraseña</string>
+    <string name="nueva_contrasenya">Nueva contraseña</string>
+    <string name="confirma_la_nueva_contrasenya">Confirma la nueva contraseña</string>
+    <string name="cambiar_correo_electronico">Cambiar correo electrónico</string>
+    <string name="nuevo_correo_electronico">Nuevo correo electrónico</string>
+    <string name="confirma_el_correo_electronico">Confirma el correo electrónico</string>
+    <string name="cambiar_numero_de_telefono">Cambiar número de teléfono</string>
+    <string name="nuevo_numero_de_telefono">Nuevo número de teléfono</string>
+    <string name="confirma_el_numero_de_telefono">Confirma el número de teléfono</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="se_borrar_n_tu_perfil_tus_datos_personales_y_eliminar_la_cuenta_de_manera_permanente">Se borrarán tu perfil, tus datos personales y eliminará la cuenta de manera permanente</string>
+
+    <!--item Receta-->
+    <string name="receta_x">Receta x</string>
+
+    <!--Solicitud de amistad-->
+    <string name="perfil_de_una_solicitud_de_amistad">perfil de una solicitud de amistad</string>
+    <string name="nombre_de_la_solicitud_de_amistad">David</string>
+    <string name="nombre_de_usuario_de_una_solicitud_de_amistad">david_121</string>
+    <string name="boton_de_aceptar_de_una_solicitud_de_amistad">Boton de aceptar de una solicitud de amistad</string>
+    <string name="boton_de_rechazar_de_una_solicitud_de_amistad">boton de rechazar de una solicitud de amistad</string>
+
+    <!--Amigo-->
+    <string name="perfil_del_chat_de_tu_amigo">perfil del chat de tu amigo</string>
+    <string name="nombre_de_tu_amigo">Emily</string>
+    <string name="nombre_de_usuario_de_tu_amigo">emily_2412</string>
+    <string name="comenzar_a_chatear">comenzar a chatear</string>
+    <string name="eliminar_amigo">eliminar amigo</string>
+
+    <!--Fragmento Perfil-->
+    <string name="titulo_perfil">Perfil</string>
+    <string name="boton_de_editar">boton de editar</string>
+    <string name="foto_de_tu_perfil">foto de tu perfil</string>
+    <string name="nombre_en_tu_perfil">Harry Potter</string>
+    <string name="el_genero">el genero</string>
+    <string name="Valor_22">22</string>
+    <string name="anyos">años</string>
+    <string name="recetas_publicadas">Recetas Publicadas</string>
+    <string name="titulo_sobre_mi">Sobre Mí</string>
+    <string name="contenido_sobre_mi">
+        Soy una persona a la que le encanta cocinar y compartir lo que prepara.
+
+        Desde pequeño/a disfruto en la cocina, probando recetas tradicionales
+        y reinventándolas con mi toque personal.
+
+        Me gusta tanto la cocina casera de toda la vida como probar platos de otras culturas.
+
+        Aquí guardo mis recetas favoritas, mis trucos y mis creaciones
+        para que cualquiera pueda cocinarlas en casa.
+
+        Si tú también crees que la mejor manera de reunir a la gente
+        es alrededor de una mesa, ¡bienvenido/a!
+    </string>
+
+    <!--Fragmento ayuda-->
+    <string name="contactanos_por_correo_electronico">Contactanos por Correo Electrónico</string>
+    <string name="tu_mensaje_opcional">Tu mensaje (opcional)</string>
+    <string name="enviar">Enviar</string>
+    <string name="contactanos_por_telefono">Contactanos por Telófono</string>
+    <string name="llamanos">Llamanos</string>
+
+    <!--nav Menu-->
+    <string name="ayuda_menu_nav">Ayuda</string>
+    <string name="home_nav_menu">Home</string>
+    <string name="perfil_nav_menu">Perfil</string>
+    <string name="my_recipe_nav_menu">My Recipe</string>
+
+    <!--Strings añadidas de la otra rama-->
+    <string name="help">Help</string>
+    <string name="home">Home</string>
+    <string name="myrecipes">MyRecipes</string>
+    <string name="myprofile">MyProfile</string>
+
 </resources>
