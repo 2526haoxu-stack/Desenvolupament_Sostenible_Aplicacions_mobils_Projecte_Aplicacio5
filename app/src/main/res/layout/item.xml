@@ -21,17 +21,21 @@
             android:padding="12dp">
 
             <ImageView
+                android:id="@+id/itemImage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
                 android:contentDescription="@string/nyam"
-                android:src="@drawable/img"/>
+                android:src="@drawable/img"
+
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="4dp">
                 <TextView
+                    android:id="@+id/itemName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -39,6 +43,7 @@
                     android:text="@string/nombre_comida"
                     android:textStyle="bold"/>
                 <ImageButton
+                    android:id="@+id/itemOpen"
                     android:layout_height="22dp"
                     android:layout_width="22dp"
                     android:layout_gravity="end"

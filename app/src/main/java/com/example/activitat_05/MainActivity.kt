@@ -46,38 +46,6 @@ class MainActivity : AppCompatActivity()/*, firstFragment.Listener*/ {
 
         // f --> End
 
-        // Funciones para navegar entre los fragmentos --> Start
-        findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, HelpFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMHome).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, firstFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMProfile).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, ProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        findViewById<LinearLayout>(R.id.aMMyRecipe).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragmentContainerView, MyRecipeFragment())
-                .addToBackStack(null)
-                .commit()
-        }
         // fNF --> End
 
         //MENU

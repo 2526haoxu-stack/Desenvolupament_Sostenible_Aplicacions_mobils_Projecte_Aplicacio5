@@ -7,13 +7,12 @@
     tools:context=".MyRecipeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewMyRecipes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/body"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/recipe_item"
-        tools:itemCount="15"/>
+        tools:itemCount="15"
+        tools:listitem="@layout/item" />
 
     <!--<LinearLayout
         android:layout_width="match_parent"

@@ -7,11 +7,12 @@
     tools:context=".firstFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item"
         android:background="?attr/body"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:itemCount="8"/>
+        tools:itemCount="8"
+        tools:listitem="@layout/item" />
 </FrameLayout>
