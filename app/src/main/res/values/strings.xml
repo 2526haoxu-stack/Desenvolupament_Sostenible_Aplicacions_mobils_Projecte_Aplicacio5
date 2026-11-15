@@ -217,4 +217,18 @@
     <string name="myrecipes">MyRecipes</string>
     <string name="myprofile">MyProfile</string>
 
+    <!--first fragment-->
+    <string name="filtrador">filtrador</string>
+    <string name="busca_la_receta">Busca la receta</string>
+    <string name="categoria">Categoría</string>
+    <string name="todas">Todas</string>
+    <string name="japonesa">Japonesa</string>
+    <string name="espa_ola">Española</string>
+    <string name="italiana">Italiana</string>
+    <string name="ucraniana">Ucraniana</string>
+    <string name="griega">Griega</string>
+    <string name="armenia">Armenia</string>
+    <string name="vegetal">Vegetal</string>
+    <string name="animal">Animal</string>
+
 </resources>
