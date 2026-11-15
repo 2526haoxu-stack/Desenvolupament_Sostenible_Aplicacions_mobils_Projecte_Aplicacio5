@@ -28,11 +28,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/requestName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/nombre_de_la_solicitud_de_amistad"
                     android:textSize="20sp"/>
                 <TextView
+                    android:id="@+id/requestUserName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/nombre_de_usuario_de_una_solicitud_de_amistad"

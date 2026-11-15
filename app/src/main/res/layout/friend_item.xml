@@ -28,11 +28,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/friendName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/nombre_de_tu_amigo"
                     android:textSize="20sp"/>
                 <TextView
+                    android:id="@+id/friendUserName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/nombre_de_usuario_de_tu_amigo"
