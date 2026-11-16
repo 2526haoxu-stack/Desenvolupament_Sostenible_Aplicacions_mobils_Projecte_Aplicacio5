@@ -15,6 +15,6 @@ data class User(
 )
 class SignUpViewModel : ViewModel() {
     private val _user = MutableLiveData<User>(User("Hugo", "Blanco", "hugo_blanco@gmail.com", "01/01/2007",
-        "+34 666 666 666", "Hugo123456789", "Hugo123456789"))
+        "+34 666 666 666", "Hugo123456789.", "Hugo123456789."))
     val user : LiveData<User> = _user
 }

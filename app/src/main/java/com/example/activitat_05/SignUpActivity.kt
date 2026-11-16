@@ -62,13 +62,13 @@ class SignUpActivity : AppCompatActivity() {
         // f --> end
 
         viewModel.user.observe(this) { valor ->
-            campoNombre.editText?.setText(valor)
-            campoApellido.editText?.setText(valor)
-            campoEmail.editText?.setText(valor)
-            campoBirthday.editText?.setText(valor)
-            campoPhoneNumber.editText?.setText(valor.toString())
-            campoPassword.editText?.setText(valor)
-            campoPasswordAgain.editText?.setText(valor)
+            campoNombre.editText?.setText(valor.nombre)
+            campoApellido.editText?.setText(valor.apellido)
+            campoEmail.editText?.setText(valor.email)
+            campoBirthday.editText?.setText(valor.fechaNacimiento)
+            campoPhoneNumber.editText?.setText(valor.telefono)
+            campoPassword.editText?.setText(valor.contrasenya)
+            campoPasswordAgain.editText?.setText(valor.contrasenyaDos)
         }
     }
 }
