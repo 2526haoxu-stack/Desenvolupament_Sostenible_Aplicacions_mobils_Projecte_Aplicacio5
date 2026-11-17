@@ -26,7 +26,7 @@ class animacionActivity : AppCompatActivity() {
         // Esperar y pasar a la pantalla principal
         val tiempoEspera = 1200L // milisegundos
         android.os.Handler(mainLooper).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, tiempoEspera)
     }

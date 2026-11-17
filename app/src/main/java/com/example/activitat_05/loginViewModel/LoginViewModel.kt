@@ -1,32 +1,37 @@
 package com.example.activitat_05.loginViewModel
-import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlin.text.iterator
 
-class LoginViewModel : ViewModel {
-    private val _errorEmail = MutableLiveData<String?>()
+class LoginViewModel : ViewModel() {
+    enum class logEvents { OK, NONE }
+
+    private val _errorUser = MutableLiveData<String?>()
     private val _errorPass = MutableLiveData<String?>()
-    private val _loginTrue = MutableLiveData(false)
+    private val _loginTrue = MutableLiveData(logEvents.NONE)
 
-    val errorEmail: LiveData<String?> = _errorEmail
+    val errorUser: LiveData<String?> = _errorUser
     val errorPass: LiveData<String?> = _errorPass
-    val loginTrue: LiveData<Boolean> = _loginTrue
+    val loginTrue: LiveData<logEvents> = _loginTrue
 
-    fun login(email: String, pass: String) {
-        val emailOk = email.esEmailValid()
+    fun login(user: String, pass: String) {
+        val userOk = user.esUserValid()
         val passOk = pass.esPasswordValid()
 
-        _errorEmail.value = if(emailOk) null else "Correo inválido"
-        _errorPass.value = if (passOk) null else "COntraseña inválida"
+        _errorUser.value = if(userOk) null else "Usuario inválido"
+        _errorPass.value = if (passOk) null else "Contraseña inválida"
+
+        if(userOk && passOk) _loginTrue.value = logEvents.OK
+        else _loginTrue.value = logEvents.NONE
+    }
+
+    fun resetEvent() {
+        _loginTrue.value = logEvents.NONE
     }
 
 
-
-
-    fun String.esEmailValid(): Boolean = isNotBlank() &&
-            Patterns.EMAIL_ADDRESS.matcher(this).matches()
+    fun String.esUserValid(): Boolean = trim().length > 2
     fun String.esPasswordValid(): Boolean {
         var espCar = 0
         var maj = 0
