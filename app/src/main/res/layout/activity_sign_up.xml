@@ -37,7 +37,7 @@
         android:background="?attr/body">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nameFiled"
+            android:id="@+id/fullNameFiled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nameField"
@@ -50,10 +50,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lastNameField"
+            android:id="@+id/userNameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/lastNameField"
+            android:hint="@string/userNameField"
             android:layout_marginBottom="10dp"
             android:layout_weight="1">
 
@@ -69,36 +69,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/emailField"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/birthday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/birthdayField"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phoneNumberField"
             android:layout_marginBottom="10dp"
             android:layout_weight="1">
 
