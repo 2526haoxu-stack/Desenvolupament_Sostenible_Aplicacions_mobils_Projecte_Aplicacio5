@@ -11,7 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.activitat_05.loginViewModel.LoginViewModel
+import com.example.activitat_05.viewModels.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
     lateinit var buttonEnter : Button
@@ -25,21 +25,29 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        //AUTO
+
         setContentView(R.layout.activity_login)
 
         user = findViewById(R.id.inputUser)
         pass = findViewById(R.id.inputPass)
 
-        viewModel.errorUser.observe(this) { user.error = it }
-        viewModel.errorPass.observe(this) { pass.error = it }
+        //viewModel.userError.observe(this) { user.error = it }
+        //viewModel.passError.observe(this) { pass.error = it }
 
         viewModel.loginTrue.observe(this) { event ->
-            if (event == LoginViewModel.logEvents.OK) {
+            if (event is LoginViewModel.logEvents.Success) {
                 Toast.makeText(this, "LOGIN CORRECTO", Toast.LENGTH_SHORT).show()
                 viewModel.resetEvent()
                 startActivity(Intent(this, MainActivity::class.java))
+            } else if (event is LoginViewModel.Error) {
+                user.error = event.userError
+                pass.error = event.passError
             }
         }
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
