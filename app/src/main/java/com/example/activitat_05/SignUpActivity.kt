@@ -11,19 +11,29 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.doAfterTextChanged
 import com.example.activitat_05.viewModels.SignUpViewModel
+import com.example.activitat_05.viewModels.SignUpState
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-
 
 
 class SignUpActivity : AppCompatActivity() {
     private val viewModel: SignUpViewModel by viewModels()
     lateinit var signUp : Button
     lateinit var volverLogIn : TextView
-    lateinit var campoNombreCompleto : TextInputLayout
-    lateinit var campoUserName : TextInputLayout
-    lateinit var campoEmail : TextInputLayout
-    lateinit var campoPassword : TextInputLayout
-    lateinit var campoPasswordAgain : TextInputLayout
+
+    // Donde escribe el usuario
+    lateinit var campoNombreCompleto : TextInputEditText
+    lateinit var campoUserName : TextInputEditText
+    lateinit var campoEmail : TextInputEditText
+    lateinit var campoPassword : TextInputEditText
+    lateinit var campoPasswordAgain : TextInputEditText
+
+    // Contenedores, donde se muestra el error
+    lateinit var errorNombreCompleto : TextInputLayout
+    lateinit var errorUserName : TextInputLayout
+    lateinit var errorEmail : TextInputLayout
+    lateinit var errorPassword : TextInputLayout
+    lateinit var errorPasswordAgain : TextInputLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,20 +48,29 @@ class SignUpActivity : AppCompatActivity() {
         // Vincular las variables con el ID --> vID start
         signUp = findViewById(R.id.aSSignUpButton)
         volverLogIn = findViewById(R.id.aSBackLogIn)
-        campoNombreCompleto = findViewById(R.id.fullNameFiled)
-        campoUserName = findViewById(R.id.userNameField)
-        campoEmail = findViewById(R.id.emailField)
-        campoPassword = findViewById(R.id.password)
-        campoPasswordAgain = findViewById(R.id.passwordAgain)
+        campoNombreCompleto = findViewById(R.id.fullNameInput)
+        campoUserName = findViewById(R.id.userNameInput)
+        campoEmail = findViewById(R.id.emailInput)
+        campoPassword = findViewById(R.id.passwordInput)
+        campoPasswordAgain = findViewById(R.id.passwordAgainInput)
+        errorNombreCompleto = findViewById(R.id.fullNameFiled)
+        errorUserName = findViewById(R.id.userNameField)
+        errorEmail = findViewById(R.id.emailField)
+        errorPassword = findViewById(R.id.password)
+        errorPasswordAgain = findViewById(R.id.passwordAgain)
+
+        // ---------- Campo -> ViewModel ----------
+        campoNombreCompleto.doAfterTextChanged { viewModel.onNombreChanged(it.toString()) }
+        campoUserName.doAfterTextChanged { viewModel.onNombreUsuarioChanged(it.toString()) }
+        campoEmail.doAfterTextChanged { viewModel.onEmailChanged(it.toString()) }
+        campoPassword.doAfterTextChanged { viewModel.onPasswordChanged(it.toString()) }
+        campoPasswordAgain.doAfterTextChanged { viewModel.onPasswordAgainChanged(it.toString()) }
 
         // vID --> end
 
         // Funciones --> f start
         signUp.setOnClickListener {
-            if (viewModel.validator()) {
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-            }
+            viewModel.registrar()
         }
 
         volverLogIn.setOnClickListener {
@@ -60,46 +79,24 @@ class SignUpActivity : AppCompatActivity() {
         }
         // f --> end
 
-        campoNombreCompleto.editText?.doAfterTextChanged { texto ->
-            viewModel.onNombreChanged(texto?.toString() ?: "")
-        }
-        campoUserName.editText?.doAfterTextChanged { texto ->
-            viewModel.onApellidoChanged(texto?.toString() ?: "")
-        }
-        campoEmail.editText?.doAfterTextChanged { texto ->
-            viewModel.onEmailChanged(texto?.toString() ?: "")
-        }
-        campoPassword.editText?.doAfterTextChanged { texto ->
-            viewModel.onPasswordChanged(texto?.toString() ?: "")
-        }
-        campoPasswordAgain.editText?.doAfterTextChanged { texto ->
-            viewModel.onPasswordAgainChanged(texto?.toString() ?: "")
+        viewModel.state.observe(this) { state ->
+            when (state) {
+                is SignUpState.Idle -> {
+                    // No hacer nada
+                }
+                is SignUpState.Success -> {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
-        viewModel.nombre.observe(this) { valor ->
-            if (campoNombreCompleto.editText?.text.toString() != valor.toString()) campoNombreCompleto.editText?.setText(valor.toString())
+        viewModel.error.observe(this) { error ->
+            errorNombreCompleto.error = error.nombre
+            errorUserName.error = error.nombreUsuario
+            errorEmail.error = error.email
+            errorPassword.error = error.contrasenya
+            errorPasswordAgain.error = error.contrasenyaDos
         }
-
-        viewModel.apellido.observe(this) { valor ->
-            if (campoUserName.editText?.text.toString() != valor.toString()) campoUserName.editText?.setText(valor.toString())
-        }
-
-        viewModel.email.observe(this) { valor ->
-            if (campoEmail.editText?.text.toString() != valor.toString()) campoEmail.editText?.setText(valor.toString())
-        }
-
-        viewModel.contrasenya.observe(this) { valor ->
-            if (campoPassword.editText?.text.toString() != valor.toString()) campoPassword.editText?.setText(valor.toString())
-        }
-
-        viewModel.contrasenyaDos.observe(this) { valor ->
-            if (campoPasswordAgain.editText?.text.toString() != valor.toString()) campoPasswordAgain.editText?.setText(valor.toString())
-        }
-
-        viewModel.errorNombre.observe(this) { campoNombreCompleto.error = it }
-        viewModel.errorApellido.observe(this) { campoUserName.error = it }
-        viewModel.errorEmail.observe(this) { campoEmail.error = it }
-        viewModel.errorContrasenya.observe(this) { campoPassword.error = it }
-        viewModel.errorContrasenyaDos.observe(this) { campoPasswordAgain.error = it }
     }
 }
