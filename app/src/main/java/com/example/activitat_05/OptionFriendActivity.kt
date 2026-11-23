@@ -10,8 +10,11 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.activity.viewModels
+import com.example.activitat_05.viewModels.FriendItemViewModel
 
 class OptionFriendActivity : AppCompatActivity() {
+    private val viewModel: FriendItemViewModel by viewModels()
     lateinit var buttonBack : LinearLayout
     private lateinit var recyclerViewItem: RecyclerView
     private lateinit var adapterItem: FriendItemAdapter
@@ -30,7 +33,6 @@ class OptionFriendActivity : AppCompatActivity() {
 
         // Relacionar variables con los id's --> Start
         buttonBack = findViewById(R.id.aOFClose)
-
         // rV --> End
 
         // Funciones --> Start
@@ -52,14 +54,9 @@ class OptionFriendActivity : AppCompatActivity() {
             val firend = DataSourceFriend.friends
 
             adapterItem = FriendItemAdapter(
-                items = firend,
+                items = viewModel.friendsList,
                 onItemClick = { item ->
-                    // AQUÍ gestionem el clic: mostrem un Toast amb el títol
-                    Toast.makeText(
-                        this,
-                        "Has clicat: ${item.name}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    eliminarAmigo(item)
                 }
             )
 
@@ -75,22 +72,46 @@ class OptionFriendActivity : AppCompatActivity() {
 
             // 3. Crear llista de dades (des de DataSource o directament)
             val request = DataSourceFriendRequest.requests
-
             adapterRequest = FriendRequestAdapter(
                 items = request,
-                onItemClick = { item ->
-                    // AQUÍ gestionem el clic: mostrem un Toast amb el títol
-                    Toast.makeText(
-                        this,
-                        "Has clicat: ${item.name}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                onAcceptClick = { item ->
+                    aceptarSolicitud(item)
+                },
+                onRejectClick = { item ->
+                    rechazarSolicitud(item)
                 }
             )
 
             // 5. Assignar l'Adapter al RecyclerView
             recyclerViewRequest.adapter = adapterRequest
-
         // Codigo de rV de Friend Item --> End
+    }
+
+    // Elimina un amigo llamando al ViewModel y notificando al adapter
+    private fun eliminarAmigo(amigo : FriendItem) {
+        val position = viewModel.removeFriend(amigo)
+        if (position != -1) {
+            adapterItem.notifyItemRemoved(position)
+            Toast.makeText(this, "Eliminado: ${amigo.name}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // Acepta una solicitud, elimina esa solicitud de la lista de solicitudes y añade ese amigo dentro de la lista de amigos
+    private fun aceptarSolicitud(request: FriendRequest) {
+        val (reqPosition, friendInsertedPosition) = viewModel.aceptarSolicitud(request)
+        if (reqPosition != -1 && friendInsertedPosition != -1) {
+            adapterRequest.notifyItemRemoved(reqPosition)
+            adapterItem.notifyItemInserted(friendInsertedPosition)
+            Toast.makeText(this, "Aceptada solicitud de: ${request.name}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // Rechaza una solicitud, elimina esa solicitud de la lista de solicitudes
+    private fun rechazarSolicitud(request: FriendRequest) {
+        val reqPosition = viewModel.rechazarSolicitud(request)
+        if (reqPosition != -1) {
+            adapterRequest.notifyItemRemoved(reqPosition)
+            Toast.makeText(this, "Rechazada solicitud de: ${request.name}", Toast.LENGTH_SHORT).show()
+        }
     }
 }

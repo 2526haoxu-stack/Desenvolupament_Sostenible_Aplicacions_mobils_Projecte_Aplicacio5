@@ -30,5 +30,4 @@ class FriendItemAdapter(
         val item = items[position]
         holder.bind(item)
     }
-
 }

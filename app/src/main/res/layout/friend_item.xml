@@ -41,12 +41,14 @@
                     android:textSize="15sp"/>
             </LinearLayout>
             <ImageView
+                android:id="@+id/chatear"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/chat_24dp"
                 android:contentDescription="@string/comenzar_a_chatear"
                 android:layout_weight="0.1"/>
             <ImageView
+                android:id="@+id/eliminar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/delete_24dp"

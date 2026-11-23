@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FriendRequestAdapter(
     private val items: List<FriendRequest>,
-    private val onItemClick: (FriendRequest) -> Unit
+    private val onAcceptClick: (FriendRequest) -> Unit,
+    private val onRejectClick: (FriendRequest) -> Unit
 ) : RecyclerView.Adapter<FriendRequestHolder>() {
 
     /**
@@ -15,7 +16,7 @@ class FriendRequestAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendRequestHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.friend_requests_item, parent, false)
-        return FriendRequestHolder(view, onItemClick)
+        return FriendRequestHolder(view, onAcceptClick, onRejectClick)
     }
 
     /**
