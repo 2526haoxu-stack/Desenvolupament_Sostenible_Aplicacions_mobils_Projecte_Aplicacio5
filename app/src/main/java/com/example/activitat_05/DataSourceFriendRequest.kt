@@ -8,6 +8,7 @@ object DataSourceFriendRequest {
         FriendRequest("Marta", "Marta_3567"),
         FriendRequest("Elena", "Elena_4678"),
         FriendRequest("Carlos", "Carlos_5789"),
-        FriendRequest("Susana", "Susana_6890")
+        FriendRequest("Susana", "Susana_6890"),
+        FriendRequest("Marta", "Marta_7901")
     )
 }

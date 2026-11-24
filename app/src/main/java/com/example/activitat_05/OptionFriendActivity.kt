@@ -2,15 +2,18 @@ package com.example.activitat_05
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.activity.viewModels
 import com.example.activitat_05.viewModels.FriendItemViewModel
 
 class OptionFriendActivity : AppCompatActivity() {
@@ -20,6 +23,7 @@ class OptionFriendActivity : AppCompatActivity() {
     private lateinit var adapterItem: FriendItemAdapter
     private lateinit var recyclerViewRequest : RecyclerView
     private lateinit var adapterRequest: FriendRequestAdapter
+    private lateinit var searchView: SearchView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +37,7 @@ class OptionFriendActivity : AppCompatActivity() {
 
         // Relacionar variables con los id's --> Start
         buttonBack = findViewById(R.id.aOFClose)
+        searchView = findViewById(R.id.aOFSearch)
         // rV --> End
 
         // Funciones --> Start
@@ -85,6 +90,19 @@ class OptionFriendActivity : AppCompatActivity() {
             // 5. Assignar l'Adapter al RecyclerView
             recyclerViewRequest.adapter = adapterRequest
         // Codigo de rV de Friend Item --> End
+
+        // Listener de la barra de búsqueda segun la documentación
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                val filteredList = viewModel.filterFriends(newText)
+                adapterItem.updateList(filteredList)
+                return true
+            }
+        })
     }
 
     // Elimina un amigo llamando al ViewModel y notificando al adapter

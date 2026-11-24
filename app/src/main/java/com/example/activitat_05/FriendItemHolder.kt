@@ -27,5 +27,4 @@ class FriendItemHolder(
             onItemClick(item)
         }
     }
-
 }

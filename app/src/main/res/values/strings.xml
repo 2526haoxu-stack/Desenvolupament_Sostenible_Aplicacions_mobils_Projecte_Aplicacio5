@@ -67,7 +67,7 @@
     <string name="chino_aOL">Chino</string>
 
     <!--Actividad Amigos-->
-    <string name="textoDelBuscardorAmigos">Buscar amigo por nombre</string>
+    <string name="textoDelBuscardorAmigos">Buscar amigo por nombre/nombre de usuario</string>
     <string name="solicitudes_de_amistad">Solicitudes de amistad</string>
 
     <!--Actividad Notificacion-->

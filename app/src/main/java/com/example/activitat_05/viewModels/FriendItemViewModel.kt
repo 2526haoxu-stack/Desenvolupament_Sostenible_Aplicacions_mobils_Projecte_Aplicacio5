@@ -11,6 +11,16 @@ class FriendItemViewModel : ViewModel() {
     val friendsList: MutableList<FriendItem> = DataSourceFriend.friends
     val requestsList: MutableList<FriendRequest> = DataSourceFriendRequest.requests
 
+    // Lógica de filtrado por nombre (name) o nombre de usuario (userName)
+    fun filterFriends(query: String?): List<FriendItem> {
+        if (query.isNullOrBlank()) return friendsList
+
+        val lowerQuery = query.lowercase().trim()
+        return friendsList.filter { friend ->
+            friend.name.lowercase().contains(lowerQuery) || friend.userName.lowercase().contains(lowerQuery)
+        }
+    }
+
     // Elimina amigo de la lista de amigos si existe y devuelve la posicíón
     fun removeFriend(friend : FriendItem) : Int {
         val index = friendsList.indexOf(friend)

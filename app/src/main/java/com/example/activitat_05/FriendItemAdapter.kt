@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class FriendItemAdapter(
-    private val items: List<FriendItem>,
+    private var items: List<FriendItem>,
     private val onItemClick: (FriendItem) -> Unit
 ) : RecyclerView.Adapter<FriendItemHolder>() {
 
@@ -29,5 +29,11 @@ class FriendItemAdapter(
     override fun onBindViewHolder(holder: FriendItemHolder, position: Int) {
         val item = items[position]
         holder.bind(item)
+    }
+
+    // Actualiza la lista con los resultados filtrados
+    fun updateList(newList: List<FriendItem>) {
+        items = newList
+        notifyDataSetChanged()
     }
 }
