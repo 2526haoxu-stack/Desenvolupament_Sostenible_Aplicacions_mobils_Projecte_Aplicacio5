@@ -5,13 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView // Search
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
+import com.example.activitat_05.viewModels.RecetaViewModel
 import com.google.android.material.chip.ChipGroup
 import androidx.core.view.isVisible
 
@@ -26,21 +27,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class firstFragment : Fragment(R.layout.fragment_first) {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    interface Listener {
-        fun onFragmentFinalitzat()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val viewModel: RecetaViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +36,7 @@ class firstFragment : Fragment(R.layout.fragment_first) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -65,6 +53,21 @@ class firstFragment : Fragment(R.layout.fragment_first) {
             ).show()
         }
         recyclerView.adapter = adapter
+
+        // Configuración del SearchView --> Start
+        val searchView = view.findViewById<SearchView>(R.id.fFragmentSearch)
+        searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                val filteredList = viewModel.filter(newText)
+                adapter.updateList(filteredList)
+                return true
+            }
+        })
+        // CDS --> End
 
         val filterIcon = view.findViewById<ImageView>(R.id.fFragmentFilter)
         val filterPanel = view.findViewById<View>(R.id.filterPanel)
@@ -108,21 +111,6 @@ class firstFragment : Fragment(R.layout.fragment_first) {
         //                 else todasLasRecetas.filter { it.categoria == categoria }
         // adapter.submitList(filtradas)
     }
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        view.findViewById<LinearLayout>(R.id.aMHelp).setOnClickListener {
-//            val activity = requireActivity()
-//            if (activity is Listener) {
-//                activity.onFragmentFinalitzat()
-//            } else {
-//                throw IllegalStateException(
-//                    "${activity::class.simpleName} ha d'implementar firstFragment.Listener"
-//                )
-//            }
-//        }
-//    }
 
     companion object {
         @JvmStatic

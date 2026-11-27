@@ -18,13 +18,13 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <com.google.android.material.search.SearchBar
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/fFragmentSearch"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/busca_la_receta"
-                android:backgroundTint="?attr/headerText"/>
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/busca_la_receta"/>
 
             <ImageView
                 android:id="@+id/fFragmentFilter"

@@ -5,17 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class Adapter(
-    private val recetas: MutableList<Receta>,
+    private var recetas: List<Receta>,
     private val onItemClick: (Receta) -> Unit
 ) : RecyclerView.Adapter<ViewHolder>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item, parent, false)
-
-
         return ViewHolder(view, onItemClick)
     }
 
@@ -27,5 +26,11 @@ class Adapter(
     ) {
         val receta = recetas[index]
         holder.mostrarReceta(receta)
+    }
+
+    // Actualiza la lista mostrada en el RecyclerView
+    fun updateList(newList: List<Receta>) {
+        recetas = newList
+        notifyDataSetChanged()
     }
 }
